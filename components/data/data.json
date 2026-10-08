@@ -1,0 +1,1327 @@
+{
+  "common": {
+    "Header": {
+      "logo_text": "Serenity Spa",
+      "logo_icon": "Flower",
+      "links": [
+        {
+          "name": "Home",
+          "href": "/",
+          "active": true
+        },
+        {
+          "name": "About Us",
+          "href": "/about"
+        },
+        {
+          "name": "Services",
+          "href": "/services"
+        },
+        {
+          "name": "Packages",
+          "href": "/packages"
+        },
+        {
+          "name": "Gallery",
+          "href": "/gallery"
+        },
+        {
+          "name": "FAQs",
+          "href": "/faqs"
+        },
+        {
+          "name": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "button_text": "BOOK APPOINTMENT",
+      "button_link": "/book-appointment"
+    },
+    "Footer": {
+      "logo_text": "Serenity Spa",
+      "logo_subtitle": "RELAX • REJUVENATE • RENEW",
+      "logo_icon": "Lotus",
+      "description": "At Serenity Spa, we are dedicated to creating a peaceful haven where you can relax, rejuvenate and restore balance in your mind, body and soul.",
+      "socials": [
+        {
+          "icon": "Facebook",
+          "href": "https://www.facebook.com/"
+        },
+        {
+          "icon": "Instagram",
+          "href": "https://www.instagram.com/"
+        },
+        {
+          "icon": "Dribbble",
+          "href": "https://dribbble.com/"
+        },
+        {
+          "icon": "Linkedin",
+          "href": "https://www.linkedin.com/"
+        }
+      ],
+      "quick_links": [
+        {
+          "name": "Home",
+          "href": "/"
+        },
+        {
+          "name": "About Us",
+          "href": "/about"
+        },
+        {
+          "name": "Services",
+          "href": "/services"
+        },
+        {
+          "name": "Gallery",
+          "href": "/gallery"
+        },
+        {
+          "name": "Contact Us",
+          "href": "/contact"
+        }
+      ],
+      "our_services": [
+        {
+          "name": "Deep Tissue Massage",
+          "href": "/services/full-body-massage"
+        },
+        {
+          "name": "Hot Stone Therapy",
+          "href": "/services/hot-stone-therapy"
+        },
+        {
+          "name": "Facial Skin Treatment",
+          "href": "/services/facial-treatments"
+        },
+        {
+          "name": "Body Scrub & Detox",
+          "href": "/services/body-scrub"
+        },
+        {
+          "name": "Aromatherapy Massage",
+          "href": "/services/aromatherapy"
+        }
+      ],
+      "contact": {
+        "address_label": "Our Address",
+        "address": "123 Education Lane,\nNew York, NY 10001",
+        "phone_label": "Phone Number",
+        "phone": "+100000000000",
+        "email_label": "Email Address",
+        "email": "info@xyz.com"
+      },
+      "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow"
+    }
+  },
+  "categories": {
+    "Spa": {
+      "templateComponents": {
+        "template-1": {
+          "pages": {
+            "home": {
+              "title": "Home",
+              "pageName": "Home",
+              "metadata": {
+                "title": "Serenity Spa - Relax, Refresh & Rejuvenate"
+              },
+              "components": [
+                {
+                  "key": "hero",
+                  "component": "Hero"
+                },
+                {
+                  "key": "about",
+                  "component": "About"
+                },
+                {
+                  "key": "services",
+                  "component": "Services"
+                },
+                {
+                  "key": "videoPromo",
+                  "component": "VideoPromo"
+                },
+                {
+                  "key": "feature",
+                  "component": "WhyChooseUs"
+                },
+                {
+                  "key": "packages",
+                  "component": "Packages"
+                },
+                {
+                  "key": "testimonials",
+                  "component": "Testimonials"
+                },
+                {
+                  "key": "cta",
+                  "component": "Cta"
+                }
+              ]
+            },
+            "about": {
+              "title": "About Us",
+              "pageName": "About Us",
+              "metadata": {
+                "title": "About Us | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "about",
+                  "component": "About"
+                },
+                {
+                  "key": "team",
+                  "component": "Team"
+                },
+                {
+                  "key": "feature",
+                  "component": "WhyChooseUs"
+                }
+              ]
+            },
+            "services": {
+              "title": "Our Services",
+              "pageName": "Our Services",
+              "metadata": {
+                "title": "Our Services | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "services",
+                  "component": "Services"
+                },
+                {
+                  "key": "cta",
+                  "component": "Cta"
+                }
+              ]
+            },
+            "service_details": {
+              "title": "Service Details",
+              "pageName": "Service Details",
+              "metadata": {
+                "title": "Service Details | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "service_details",
+                  "component": "ServiceDetails"
+                }
+              ]
+            },
+            "packages": {
+              "title": "Our Packages",
+              "pageName": "Packages",
+              "metadata": {
+                "title": "Packages | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "packages",
+                  "component": "Packages"
+                }
+              ]
+            },
+            "gallery": {
+              "title": "Our Gallery",
+              "pageName": "Gallery",
+              "metadata": {
+                "title": "Gallery | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "gallery",
+                  "component": "Gallery"
+                }
+              ]
+            },
+            "faqs": {
+              "bg_image": "/img/sectionbg.webp",
+              "title": "FAQs",
+              "pageName": "FAQs",
+              "metadata": {
+                "title": "FAQs | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "faq",
+                  "component": "FAQ"
+                }
+              ]
+            },
+            "contact": {
+              "title": "Contact Us",
+              "pageName": "Contact Us",
+              "metadata": {
+                "title": "Contact Us | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "contact",
+                  "component": "Contact"
+                }
+              ]
+            },
+            "book_appointment": {
+              "title": "Book Appointment",
+              "pageName": "Book Appointment",
+              "metadata": {
+                "title": "Book Appointment | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "book_appointment",
+                  "component": "BookAppointment"
+                }
+              ]
+            },
+            "thank_you": {
+              "title": "Thank You",
+              "pageName": "Thank You",
+              "metadata": {
+                "title": "Thank You | Serenity Spa"
+              },
+              "components": [
+                {
+                  "key": "thank_you",
+                  "component": "ThankYou"
+                }
+              ]
+            }
+          },
+          "sections": {
+            "hero": {
+              "ornament_image": "/img/bannerocpn.webp",
+              "slides": [
+                {
+                  "title_line1": "Relax,",
+                  "title_highlight": "Refresh",
+                  "title_line2": "& Rejuvenate",
+                  "description": "Experience the perfect blend of traditional therapies and modern wellness at Serenity Spa.",
+                  "primary_button": {
+                    "text": "BOOK APPOINTMENT",
+                    "href": "/book-appointment"
+                  },
+                  "secondary_button": {
+                    "text": "EXPLORE TREATMENTS",
+                    "href": "/services"
+                  },
+                  "info_line": "Special Offer: 20% Off on Your First Visit",
+                  "info_icon": "MapPin",
+                  "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                }
+              ]
+            },
+            "about": {
+              "decoration_image": "/img/flowericon.webp",
+              "subtitle": "ABOUT US",
+              "title_line1": "Your Relaxation",
+              "title_line2": "Our Passion",
+              "description": "At Serenity Spa, we focus on wellness in a peaceful setting, our therapists use soothing techniques in a peaceful ambiance to help you relax, de-stress, and truly revitalize your mind, body and soul.",
+              "stats": [
+                {
+                  "value": "5+",
+                  "label": "Years of Experience"
+                },
+                {
+                  "value": "10K+",
+                  "label": "Happy Clients"
+                },
+                {
+                  "value": "20+",
+                  "label": "Professional Therapists"
+                }
+              ],
+              "button": {
+                "text": "Know More About Us",
+                "href": "/about"
+              },
+              "image1": "/img/about1.webp",
+              "image2": "/img/about2.webp"
+            },
+            "services": {
+              "subtitle": "OUR SPA SERVICES",
+              "title_line1": "Discover Our Spa Treatments",
+              "description": "Our visually stunning spa therapies and wellness experiences are designed to satisfy and bring you peace.",
+              "button": {
+                "text": "View All Services",
+                "href": "/services"
+              },
+              "items": [
+                {
+                  "title": "Full Body Massage",
+                  "description": "Relax your body and mind with soothing massage techniques to relieve stress and improve blood circulation.",
+                  "icon": "Heart",
+                  "image": "/services/1.webp",
+                  "link": "/services/full-body-massage",
+                  "slug": "full-body-massage",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Facial Treatments",
+                  "description": "Nourish and rejuvenate your skin with our customized facials for a healthy and natural glow.",
+                  "icon": "Smile",
+                  "image": "/services/2.webp",
+                  "link": "/services/facial-treatments",
+                  "slug": "facial-treatments",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Aromatherapy",
+                  "description": "Experience deep relaxation with natural essential oils that balance your mind and body.",
+                  "icon": "Leaf",
+                  "image": "/services/3.webp",
+                  "link": "/services/aromatherapy",
+                  "slug": "aromatherapy",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Hot Stone Therapy",
+                  "description": "Melt away muscle tension and stress with the healing warmth of natural hot stones.",
+                  "icon": "Flame",
+                  "image": "/services/4.webp",
+                  "link": "/services/hot-stone-therapy",
+                  "slug": "hot-stone-therapy",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Foot Reflexology",
+                  "description": "Stimulate pressure points to improve energy flow and promote overall well-being.",
+                  "icon": "Footprints",
+                  "image": "/services/5.webp",
+                  "link": "/services/foot-reflexology",
+                  "slug": "foot-reflexology",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Body Scrub",
+                  "description": "Exfoliate and refresh your skin with natural scrubs for a softer, smoother and brighter feel.",
+                  "icon": "Sparkles",
+                  "image": "/services/6.webp",
+                  "link": "/services/body-scrub",
+                  "slug": "body-scrub",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Body Wrap",
+                  "description": "Detoxify, hydrate and rejuvenate your skin with our therapeutic body wraps.",
+                  "icon": "Trees",
+                  "image": "/services/7.webp",
+                  "link": "/services/body-wrap",
+                  "slug": "body-wrap",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Couple Spa",
+                  "description": "Enjoy a relaxing spa experience together with specially designed treatments for couples.",
+                  "icon": "Users",
+                  "image": "/services/8.webp",
+                  "link": "/services/couple-spa",
+                  "slug": "couple-spa",
+                  "details": {
+                    "keyBenefits": [
+                      {
+                        "title": "Stress Relief",
+                        "desc": "Helps calm the mind and reduce anxiety.",
+                        "icon": "/icons/lotus.svg"
+                      },
+                      {
+                        "title": "Improved Blood Circulation",
+                        "desc": "Enhances oxygen flow and boosts energy.",
+                        "icon": "/icons/leaf.svg"
+                      },
+                      {
+                        "title": "Muscle Relaxation",
+                        "desc": "Relieves muscle tension and stiffness.",
+                        "icon": "/icons/stones.svg"
+                      },
+                      {
+                        "title": "Better Sleep",
+                        "desc": "Promotes deeper and more restful sleep.",
+                        "icon": "/icons/moon.svg"
+                      }
+                    ],
+                    "galleryImages": [
+                      "/img/gallery1.webp",
+                      "/img/gallery2.webp",
+                      "/img/gallery3.webp",
+                      "/img/gallery4.webp"
+                    ],
+                    "faqs": [
+                      {
+                        "question": "Q1. What is Aromatherapy Massage?",
+                        "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                      },
+                      {
+                        "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                        "answer": "It helps with relaxation, pain management, and improved mood."
+                      },
+                      {
+                        "question": "Q3. How long does a session last?",
+                        "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                      },
+                      {
+                        "question": "Q4. Are there any side effects?",
+                        "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                      },
+                      {
+                        "question": "Q5. Do I need to book an appointment in advance?",
+                        "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "videoPromo": {
+              "subtitle": "SPA EXPERIENCE",
+              "title_line1": "Feel the True Essence of Relaxation",
+              "description": "Immerse yourself in a transformative journey of rejuvenation where every moment is tailored to your well-being.",
+              "video_id": "dQw4w9WgXcQ",
+              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+              "features": [
+                {
+                  "title": "Natural Therapies",
+                  "icon": "Leaf"
+                },
+                {
+                  "title": "Trained Experts",
+                  "icon": "Lotus"
+                },
+                {
+                  "title": "Peaceful Ambience",
+                  "icon": "Database"
+                },
+                {
+                  "title": "Refreshing Experience",
+                  "icon": "Leaf"
+                }
+              ]
+            },
+            "feature": {
+              "subtitle": "WHY CHOOSE US",
+              "title_line1": "The Perfect Place for",
+              "title_highlight": "Relaxation",
+              "title_line2": "and Rejuvenation",
+              "description": "From luxurious spa facilities to personalized therapies, we focus on delivering experiences that promote relaxation, reduce stress and bring balance to your mind, body and soul.",
+              "points": [
+                {
+                  "title": "Certified Spa Therapists",
+                  "description": "Our team of professional therapists is highly trained & experienced.",
+                  "icon": "Users"
+                },
+                {
+                  "title": "Personalized Treatments",
+                  "description": "Every session is customized to meet your unique wellness needs.",
+                  "icon": "Lotus"
+                }
+              ],
+              "stats": [
+                {
+                  "value": "25+",
+                  "label": "Years of\nExperience",
+                  "icon": "CalendarStar"
+                },
+                {
+                  "value": "10K+",
+                  "label": "Happy\nClients",
+                  "icon": "Smile"
+                },
+                {
+                  "value": "20+",
+                  "label": "Premium\nTherapies",
+                  "icon": "Leaf"
+                }
+              ],
+              "image1": "/img/w1.webp",
+              "image2": "/img/w2.webp",
+              "badge_year": "2015"
+            },
+            "team": {
+              "decoration_image": "/img/leaf.webp",
+              "subtitle": "OUR TEAM",
+              "title_line1": "Meet Our ",
+              "title_highlight": "Expert Therapists",
+              "description": "Our certified and experienced therapists are dedicated to providing you with exceptional care, relaxation, and rejuvenation at Serenity Spa.",
+              "members": [
+                {
+                  "name": "Sophie Mitchell",
+                  "role": "HEAD THERAPIST",
+                  "description": "Specializes in deep tissue massage and therapeutic treatments to relieve stress and restore balance.",
+                  "image": "/team/1.webp",
+                  "socials": {
+                    "facebook": "https://www.facebook.com/",
+                    "instagram": "https://www.instagram.com/",
+                    "linkedin": "https://www.linkedin.com/",
+                    "email": "mailto:info@xyz.com"
+                  }
+                },
+                {
+                  "name": "Emily Carter",
+                  "role": "FACIAL SPECIALIST",
+                  "description": "Expert in advanced facial therapies and skin care treatments for natural, healthy and glowing skin.",
+                  "image": "/team/2.webp",
+                  "socials": {
+                    "facebook": "https://www.facebook.com/",
+                    "instagram": "https://www.instagram.com/",
+                    "linkedin": "https://www.linkedin.com/",
+                    "email": "mailto:info@xyz.com"
+                  }
+                },
+                {
+                  "name": "Olivia Bennett",
+                  "role": "AROMATHERAPY EXPERT",
+                  "description": "Creates personalized aromatherapy sessions to relax the mind, refresh the body, and uplift the soul.",
+                  "image": "/team/3.webp",
+                  "socials": {
+                    "facebook": "https://www.facebook.com/",
+                    "instagram": "https://www.instagram.com/",
+                    "linkedin": "https://www.linkedin.com/",
+                    "email": "mailto:info@xyz.com"
+                  }
+                },
+                {
+                  "name": "Isabella Ross",
+                  "role": "MASSAGE THERAPIST",
+                  "description": "Specializes in Swedish, hot stone and relaxation massage for complete mind and body rejuvenation.",
+                  "image": "/team/1.webp",
+                  "socials": {
+                    "facebook": "https://www.facebook.com/",
+                    "instagram": "https://www.instagram.com/",
+                    "linkedin": "https://www.linkedin.com/",
+                    "email": "mailto:info@xyz.com"
+                  }
+                }
+              ]
+            },
+            "packages": {
+              "subtitle": "SPECIAL OFFERS",
+              "title_line1": "Special Spa Packages",
+              "description": "Choose from our handpicked packages for a complete wellness experience.",
+              "button": {
+                "text": "Explore Packages",
+                "href": "/packages"
+              },
+              "image": "/img/pakeges.webp"
+            },
+            "testimonials": {
+              "bg_image": "/img/sectionbg.webp",
+              "subtitle": "TESTIMONIALS",
+              "title_line1": "What People Are Saying",
+              "description": "Real stories from our valued clients who have experienced relaxation,\nrejuvenation, and wellness at our spa.",
+              "reviews": [
+                {
+                  "text": "A truly relaxing experience, the ambiance and staff made me feel refreshed instantly. Best massage I've ever had! The therapists are skilled and very professional.",
+                  "author": "SILLY SAILONI",
+                  "role": "Deep Tissue Massage",
+                  "rating": 5,
+                  "avatar": "https://randomuser.me/api/portraits/women/44.webp"
+                },
+                {
+                  "text": "Peaceful atmosphere, natural therapies, and excellent service. Highly recommend! I came stressed, but left completely relaxed and rejuvenated. Worth every penny.",
+                  "author": "DIANA",
+                  "role": "Facials & Skin Care",
+                  "rating": 5,
+                  "avatar": "https://randomuser.me/api/portraits/women/68.webp"
+                },
+                {
+                  "text": "The spa offers exceptional services with a perfect blend of relaxation and rejuvenation. From soothing massages to refreshing facials, every treatment is delivered with care, professionalism.",
+                  "author": "ZARA LI",
+                  "role": "Couple Special",
+                  "rating": 5,
+                  "avatar": "https://randomuser.me/api/portraits/women/91.webp"
+                }
+              ]
+            },
+            "bookAppointment": {
+              "subtitle": "Book An Appointment",
+              "title_line1": "Relax Refresh Rejuvenate",
+              "title_highlight": "Spa Treatments",
+              "title_line2": "with Our",
+              "description": "Our professional therapists provide personalized treatments that help you relax, relieve stress, and restore balance to your mind and body.",
+              "image": "/img/get.webp",
+              "form": {
+                "title_line1": "Book Your",
+                "description": "Fill out the form below and our team will get back to you to confirm your appointment.",
+                "button_text": "Book Appointment"
+              },
+              "features": [
+                {
+                  "title": "Easy Booking",
+                  "description": "Quick and hassle-free appointment process.",
+                  "icon": "CalendarDays"
+                },
+                {
+                  "title": "Expert Therapists",
+                  "description": "Trained and certified spa professionals.",
+                  "icon": "Leaf"
+                },
+                {
+                  "title": "Personalized Care",
+                  "description": "Treatments tailored to your needs.",
+                  "icon": "Lotus"
+                },
+                {
+                  "title": "Relaxing Environment",
+                  "description": "Calm and hygienic spa atmosphere.",
+                  "icon": "Shield"
+                }
+              ]
+            },
+            "faq": {
+              "subtitle": "FAQ",
+              "title_line1": "Frequently Asked",
+              "title_highlight": "Questions",
+              "description": "Find answers to the most common questions about our spa services, treatments, booking process, and more.",
+              "questions": [
+                {
+                  "q": "Q1. What types of spa services do you offer?",
+                  "a": "We offer a wide range of spa services including massage therapy, facial treatments, body care, aromatherapy, and wellness packages tailored to your needs. Each service is designed to help you relax, rejuvenate, and improve overall well-being."
+                },
+                {
+                  "q": "Q2. How do I book an appointment?",
+                  "a": "You can book an appointment directly through our website by visiting the Book Appointment page, or you can call us at our phone number. Walk-ins are also welcome subject to availability."
+                },
+                {
+                  "q": "Q3. Do I need to bring anything for my spa session?",
+                  "a": "Just bring yourself! We provide robes, slippers, and all necessary amenities. You may want to bring your swimsuit if you plan to use our hydrotherapy facilities."
+                },
+                {
+                  "q": "Q4. Are your spa products safe and natural?",
+                  "a": "Yes, we use only high-quality, organic, and natural products that are safe for all skin types. If you have specific allergies, please inform us beforehand."
+                },
+                {
+                  "q": "Q5. How long does a typical spa session last?",
+                  "a": "A typical session lasts anywhere from 60 to 90 minutes depending on the treatment you choose. We recommend arriving 15 minutes early."
+                },
+                {
+                  "q": "Q6. Can I customize a spa package?",
+                  "a": "Absolutely! We offer customized packages. Please speak with our spa coordinators to create a package that perfectly suits your preferences."
+                },
+                {
+                  "q": "Q7. Do you offer packages for special occasions?",
+                  "a": "Yes, we have special packages for birthdays, anniversaries, and bridal parties. Contact us for group bookings and special arrangements."
+                },
+                {
+                  "q": "Q8. What is your cancellation or rescheduling policy?",
+                  "a": "We request a minimum of 24 hours notice for any cancellations or rescheduling. Late cancellations may incur a fee."
+                }
+              ]
+            },
+            "cta": {
+              "title_line1": "Ready to Experience",
+              "title_highlight": "Relaxation",
+              "title_line2": "& Wellness?",
+              "description": "Book your spa appointment today and let our expert therapists take care of your mind, body, and soul.",
+              "button": {
+                "text": "BOOK A APPOINTMENT",
+                "href": "/book-appointment"
+              },
+              "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            },
+            "serviceDetails": {
+              "keyBenefits": [
+                {
+                  "title": "Stress Relief",
+                  "desc": "Helps calm the mind and reduce anxiety.",
+                  "icon": "/icons/lotus.svg"
+                },
+                {
+                  "title": "Improved Blood Circulation",
+                  "desc": "Enhances oxygen flow and boosts energy.",
+                  "icon": "/icons/leaf.svg"
+                },
+                {
+                  "title": "Muscle Relaxation",
+                  "desc": "Relieves muscle tension and stiffness.",
+                  "icon": "/icons/stones.svg"
+                },
+                {
+                  "title": "Better Sleep",
+                  "desc": "Promotes deeper and more restful sleep.",
+                  "icon": "/icons/moon.svg"
+                }
+              ],
+              "galleryImages": [
+                "/img/gallery1.webp",
+                "/img/gallery2.webp",
+                "/img/gallery3.webp",
+                "/img/gallery4.webp"
+              ],
+              "faqs": [
+                {
+                  "question": "Q1. What is Aromatherapy Massage?",
+                  "answer": "Aromatherapy Massage is a therapeutic massage that uses natural essential oils to promote relaxation, reduce stress, relieve muscle tension, and improve overall well-being."
+                },
+                {
+                  "question": "Q2. What are the benefits of Aromatherapy Massage?",
+                  "answer": "It helps with relaxation, pain management, and improved mood."
+                },
+                {
+                  "question": "Q3. How long does a session last?",
+                  "answer": "Sessions typically last between 60 to 90 minutes depending on your preference."
+                },
+                {
+                  "question": "Q4. Are there any side effects?",
+                  "answer": "Aromatherapy is generally safe, but some people may be sensitive to certain essential oils."
+                },
+                {
+                  "question": "Q5. Do I need to book an appointment in advance?",
+                  "answer": "Yes, we recommend booking in advance to secure your preferred time."
+                }
+              ]
+            },
+            "gallery": {
+              "subtitle": "OUR GALLERY",
+              "title": "Moments of Relaxation & Wellness",
+              "description": "Take a look at our serene spa environment, soothing therapies, and happy clients enjoying a truly relaxing experience.",
+              "categories": [
+                "All",
+                "Massage Therapy",
+                "Facial Treatment",
+                "Body Care",
+                "Spa Environment"
+              ],
+              "items": [
+                {
+                  "id": 1,
+                  "category": "Facial Treatment",
+                  "image": "/gallery/1.webp"
+                },
+                {
+                  "id": 2,
+                  "category": "Massage Therapy",
+                  "image": "/gallery/2.webp"
+                },
+                {
+                  "id": 3,
+                  "category": "Spa Environment",
+                  "image": "/gallery/3.webp"
+                },
+                {
+                  "id": 4,
+                  "category": "Massage Therapy",
+                  "image": "/gallery/4.webp"
+                },
+                {
+                  "id": 5,
+                  "category": "Spa Environment",
+                  "image": "/gallery/5.webp"
+                },
+                {
+                  "id": 6,
+                  "category": "Body Care",
+                  "image": "/gallery/6.webp"
+                },
+                {
+                  "id": 7,
+                  "category": "Facial Treatment",
+                  "image": "/gallery/7.webp"
+                },
+                {
+                  "id": 8,
+                  "category": "Body Care",
+                  "image": "/gallery/8.webp"
+                },
+                {
+                  "id": 9,
+                  "category": "Spa Environment",
+                  "image": "/gallery/9.webp"
+                }
+              ]
+            },
+            "packageGrid": {
+              "subtitle": "OUR PACKAGES",
+              "title": "Relaxation for Every Need",
+              "description": "Choose from our carefully curated spa packages designed to refresh your mind, revitalize your body, and restore your inner balance.",
+              "categories": [
+                "All Packages",
+                "Massage Therapy",
+                "Facial Treatment",
+                "Body Care",
+                "Wellness Packages"
+              ],
+              "items": [
+                {
+                  "id": 1,
+                  "category": "Massage Therapy",
+                  "image": "/gallery/1.webp",
+                  "title": "Basic Relaxation Package",
+                  "description": "A perfect package for first-time visitors to experience ultimate relaxation.",
+                  "price": "₹1,499",
+                  "features": [
+                    "Full Body Massage (60 mins)",
+                    "Aromatherapy",
+                    "Steam Therapy",
+                    "Herbal Tea"
+                  ],
+                  "duration": "60 Minutes"
+                },
+                {
+                  "id": 2,
+                  "category": "Facial Treatment",
+                  "image": "/gallery/2.webp",
+                  "title": "Deluxe Spa Package",
+                  "description": "A complete rejuvenation package to relax, refresh and restore your natural glow.",
+                  "price": "₹2,499",
+                  "features": [
+                    "Full Body Massage (60 mins)",
+                    "Facial Treatment (45 mins)",
+                    "Aromatherapy Steam",
+                    "Body Scrub",
+                    "Herbal Tea & Refreshments"
+                  ],
+                  "duration": "90 Minutes",
+                  "mostPopular": true
+                },
+                {
+                  "id": 3,
+                  "category": "Wellness Packages",
+                  "image": "/gallery/3.webp",
+                  "title": "Premium Wellness Package",
+                  "description": "An advanced package for complete body care, skin nourishment and stress relief.",
+                  "price": "₹3,999",
+                  "features": [
+                    "Full Body Massage (90 mins)",
+                    "Facial Treatment",
+                    "Body Scrub & Wrap",
+                    "Hot Stone Therapy",
+                    "Aromatherapy Steam",
+                    "Herbal Tea & Refreshments"
+                  ],
+                  "duration": "120 Minutes"
+                },
+                {
+                  "id": 4,
+                  "category": "Wellness Packages",
+                  "image": "/gallery/4.webp",
+                  "title": "Couple Spa Package",
+                  "description": "Enjoy a relaxing spa experience together with your partner.",
+                  "price": "₹5,999",
+                  "features": [
+                    "Couple Full Body Massage (60 mins)",
+                    "Aromatherapy",
+                    "Facial Treatment",
+                    "Steam Therapy",
+                    "Refreshments for Two"
+                  ],
+                  "duration": "90 Minutes"
+                }
+              ]
+            },
+            "contact": {
+              "bg_image": "/img/sectionbg.webp",
+              "subtitle": "GET IN TOUCH",
+              "title_line1": "Do You Have Any",
+              "title_highlight": "Questions?",
+              "description": "We're here to help! Feel free to reach out to us for bookings, inquiries, or any other information. Our team will get back to you as soon as possible.",
+              "map_iframe_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102027.31846830502!2d-83.85695027592471!3d37.15174313222383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884332e9d2822a91%3A0x673db2b0e6e76cf1!2sManchester%2C%20KY%2040962!5e0!3m2!1sen!2sus!4v1714571983051!5m2!1sen!2sus",
+              "info_cards": [
+                {
+                  "title": "Our Address",
+                  "detail1": "123 Education Lane,",
+                  "detail2": "New York, NY 10001",
+                  "icon": "MapPin"
+                },
+                {
+                  "title": "Email Address",
+                  "detail1": "info@xyz.com",
+                  "icon": "Mail"
+                },
+                {
+                  "title": "Phone Number",
+                  "detail1": "+100000000000",
+                  "icon": "Phone"
+                },
+                {
+                  "title": "Working Hours",
+                  "detail1": "Monday to Sunday :",
+                  "detail2": "09:00 AM - 08:00 PM",
+                  "icon": "Clock"
+                }
+              ],
+              "form": {
+                "name_placeholder": "Your Name",
+                "email_placeholder": "Your Email",
+                "phone_placeholder": "Your Phone",
+                "subject_placeholder": "Subject",
+                "message_placeholder": "Write something Here...",
+                "button_text": "Send Message"
+              }
+            },
+            "thank_you": {
+              "bg_image": "/img/thank.webp",
+              "title": "Thank You!",
+              "subtitle": "Your Appointment Has Been Booked!",
+              "description": "Thank you for choosing our spa services. We have received your appointment request and our team will get back to you shortly to confirm your booking.",
+              "button": {
+                "text": "Back to Home",
+                "href": "/"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
