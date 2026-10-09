@@ -838,7 +838,7 @@
               "title_line1": "Feel the True Essence of Relaxation",
               "description": "Immerse yourself in a transformative journey of rejuvenation where every moment is tailored to your well-being.",
               "video_id": "dQw4w9WgXcQ",
-              "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+              "image": "/img/b1.webp",
               "features": [
                 {
                   "title": "Natural Therapies",
@@ -975,21 +975,21 @@
                   "author": "SILLY SAILONI",
                   "role": "Deep Tissue Massage",
                   "rating": 5,
-                  "avatar": "https://randomuser.me/api/portraits/women/44.webp"
+                  "avatar": "/testimonials/1.webp"
                 },
                 {
                   "text": "Peaceful atmosphere, natural therapies, and excellent service. Highly recommend! I came stressed, but left completely relaxed and rejuvenated. Worth every penny.",
                   "author": "DIANA",
                   "role": "Facials & Skin Care",
                   "rating": 5,
-                  "avatar": "https://randomuser.me/api/portraits/women/68.webp"
+                  "avatar": "/testimonials/2.webp"
                 },
                 {
                   "text": "The spa offers exceptional services with a perfect blend of relaxation and rejuvenation. From soothing massages to refreshing facials, every treatment is delivered with care, professionalism.",
                   "author": "ZARA LI",
                   "role": "Couple Special",
                   "rating": 5,
-                  "avatar": "https://randomuser.me/api/portraits/women/91.webp"
+                  "avatar": "/testimonials/3.webp"
                 }
               ]
             },
@@ -1077,7 +1077,7 @@
                 "text": "BOOK A APPOINTMENT",
                 "href": "/book-appointment"
               },
-              "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+              "image": "/img/cta.webp"
             },
             "serviceDetails": {
               "keyBenefits": [
