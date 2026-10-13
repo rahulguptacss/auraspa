@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FAQProps } from '@/components/types';
 
@@ -24,10 +23,16 @@ export default function FAQ({ data }: FAQProps) {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-white relative overflow-hidden" id="faq">
-      {/* Background Side Images */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40">
-        <Image src={data.bg_image || '/img/sectionbg.png'} alt="Background leaves" layout="fill" objectFit="cover" />
+    <section className="py-10 md:py-16 bg-[#f6f3ec] relative overflow-hidden" id="faq">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <img src="/img/sectionbg.webp" alt="" className="h-full w-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(246,243,236,0.72),rgba(244,247,240,0.88))]" />
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{ backgroundImage: 'radial-gradient(rgba(74,99,54,0.28) 0.7px, transparent 0.7px)', backgroundSize: '16px 16px' }}
+        />
+        <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-[#d7e3c4]/70 blur-3xl" />
+        <div className="absolute -right-10 bottom-8 h-64 w-64 rounded-full bg-[#efe2c4]/80 blur-3xl" />
       </div>
 
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

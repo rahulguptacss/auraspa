@@ -25,9 +25,16 @@ const LotusIcon = ({ size = 24, className = "" }) => (
 
 export default function Contact({ data }: ContactProps) {
   return (
-    <section className="py-10 md:py-12 bg-white relative overflow-hidden" id="contact">
-      <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-20 z-0">
-        <Image src={data.bg_image || '/img/sectionbg.png'} alt="Background leaves" layout="fill" objectFit="cover" />
+    <section className="py-10 md:py-12 bg-[#f6f3ec] relative overflow-hidden" id="contact">
+      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden>
+        <img src="/img/sectionbg.webp" alt="" className="h-full w-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(246,243,236,0.72),rgba(244,247,240,0.88))]" />
+        <div
+          className="absolute inset-0 opacity-50"
+          style={{ backgroundImage: 'radial-gradient(rgba(74,99,54,0.28) 0.7px, transparent 0.7px)', backgroundSize: '16px 16px' }}
+        />
+        <div className="absolute -left-16 top-16 h-56 w-56 rounded-full bg-[#d7e3c4]/70 blur-3xl" />
+        <div className="absolute -right-10 bottom-10 h-64 w-64 rounded-full bg-[#efe2c4]/80 blur-3xl" />
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -53,8 +60,14 @@ export default function Contact({ data }: ContactProps) {
                 <h3 className="text-[17px] md:text-[22px] font-serif text-[#11160e] mb-2 z-10 mt-1 md:mt-0">{card.title}</h3>
                 <span className="w-8 md:w-10 h-[1.5px] bg-[#d3dfc3] mb-2 md:mb-3 z-10"></span>
                 <p className="text-[#4a5342] text-[12px] md:text-[14px] leading-[1.6] z-10 break-words w-full">
-                  {card.detail1}<br />
-                  {card.detail2 && card.detail2}
+                  {card.icon === 'Mail' ? (
+                    <a href={`mailto:${card.detail1}`} className="hover:text-[#4a6336] transition-colors">{card.detail1}</a>
+                  ) : card.icon === 'Phone' ? (
+                    <a href={`tel:${card.detail1.replace(/[^\d+]/g, '')}`} className="hover:text-[#4a6336] transition-colors">{card.detail1}</a>
+                  ) : (
+                    card.detail1
+                  )}
+                  {card.detail2 && <><br />{card.detail2}</>}
                 </p>
               </div>
             );

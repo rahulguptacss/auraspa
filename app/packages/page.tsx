@@ -2,7 +2,6 @@ import { common, sections } from '@/components/types';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import Breadcrumb from '@/components/sections/Breadcrumb';
-import CTA from '@/components/sections/CTA';
 import PackageGrid from '@/components/sections/PackageGrid';
 
 export default function PackagesPage() {
@@ -12,7 +11,6 @@ export default function PackagesPage() {
       <main className="w-full flex-1">
         <Breadcrumb title="Our Packages" breadcrumb="HOME / OUR PACKAGES" />
         <PackageGrid data={(sections as any).packageGrid} />
-        <CTA data={sections.cta} />
       </main>
       <Footer data={common.Footer} />
     </div>

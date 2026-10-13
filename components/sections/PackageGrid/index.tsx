@@ -179,7 +179,7 @@ export default function PackageGrid({ data }: PackageGridProps) {
                     </div>
 
                     <Link
-                      href="#book"
+                      href="/book-appointment"
                       className="flex items-center justify-center gap-2 w-full bg-[#485f38] text-white py-3.5 rounded-full text-[14px] font-medium hover:bg-[#3a4d2c] transition-colors shadow-md hover:shadow-lg"
                     >
                       Book Now

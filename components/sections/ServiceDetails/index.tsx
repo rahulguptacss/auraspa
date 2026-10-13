@@ -117,7 +117,7 @@ export default function ServiceDetails({ service, allServices, data }: { service
               <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#849a75] mb-3 block">
                 {service.title.toUpperCase()}
               </span>
-              <h1 className="text-4xl md:text-5xl font-serif text-[#1c2417] mb-6">
+              <h1 className="text-3xl md:text-4xl font-serif text-[#1c2417] mb-6">
                 <span className="font-bold text-[#1c2417]">{service.title.split(' ')[0]}</span> <span className="text-[#485f38]">{service.title.split(' ').slice(1).join(' ')}</span>
               </h1>
               

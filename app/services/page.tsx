@@ -4,7 +4,6 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import Breadcrumb from '@/components/sections/Breadcrumb';
 import Services from '@/components/sections/Services';
-import CTA from '@/components/sections/CTA';
 
 export const metadata = {
   title: pages.services?.metadata?.title || 'Our Services | Serenity Spa',
@@ -17,7 +16,6 @@ export default function ServicesPage() {
       <main className="w-full flex-1">
         <Breadcrumb title={pages.services?.title || "Our Services"} breadcrumb="OUR SERVICES" />
         <Services data={sections.services} isGrid={true} />
-        <CTA data={sections.cta} />
       </main>
       <Footer data={common.Footer} />
     </div>

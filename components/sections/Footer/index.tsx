@@ -187,7 +187,7 @@ export default function Footer({ data }: FooterProps) {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[#d6a655] font-medium text-[15px] mb-1">{data.contact.phone_label}</span>
-                    <span className="text-[#dcdcdc] text-[14px]">{data.contact.phone}</span>
+                    <a href={`tel:${data.contact.phone.replace(/[^\d+]/g, '')}`} className="text-[#dcdcdc] text-[14px] hover:text-white transition-colors">{data.contact.phone}</a>
                   </div>
                 </li>
                 <li className="flex gap-4 items-start">
@@ -196,7 +196,7 @@ export default function Footer({ data }: FooterProps) {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-[#d6a655] font-medium text-[15px] mb-1">{data.contact.email_label}</span>
-                    <span className="text-[#dcdcdc] text-[14px]">{data.contact.email}</span>
+                    <a href={`mailto:${data.contact.email}`} className="text-[#dcdcdc] text-[14px] hover:text-white transition-colors">{data.contact.email}</a>
                   </div>
                 </li>
               </ul>

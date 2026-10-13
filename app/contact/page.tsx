@@ -3,7 +3,6 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import Breadcrumb from '@/components/sections/Breadcrumb';
 import Contact from '@/components/sections/Contact';
-import CTA from '@/components/sections/CTA';
 
 export default function ContactPage() {
   return (
@@ -12,7 +11,6 @@ export default function ContactPage() {
       <main className="w-full flex-1">
         <Breadcrumb title="Contact Us" breadcrumb="HOME / CONTACT US" />
         <Contact data={sections.contact} />
-        <CTA data={sections.cta} />
       </main>
       <Footer data={common.Footer} />
     </div>

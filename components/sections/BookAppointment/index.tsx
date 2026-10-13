@@ -56,7 +56,7 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
   return (
     <section className="pt-16 md:pt-24 pb-4 md:pb-8 bg-[#f9fbf6]" id="book">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 items-start mb-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12 items-stretch mb-16">
           
           {/* Left Content */}
           <div className="w-full lg:w-[52%] xl:w-[54%] flex flex-col">
@@ -85,7 +85,7 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
             </p>
 
             {/* Image with Contact Bar */}
-            <div className="relative rounded-[24px] overflow-hidden w-full h-[350px] sm:h-[400px] shadow-lg mb-12 lg:mb-0">
+            <div className="relative rounded-[24px] overflow-hidden w-full h-[350px] sm:h-[400px] lg:h-auto lg:flex-1 lg:min-h-[400px] shadow-lg mb-12 lg:mb-0">
               <Image 
                 src={data.image} 
                 alt={data.title_highlight} 
@@ -141,7 +141,7 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
           </div>
 
           {/* Right Content - Form */}
-          <div className="w-full lg:w-[48%] xl:w-[46%] bg-[#f4f7f0] rounded-[24px] border border-[#e9eedc] p-6 lg:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+          <div className="w-full lg:w-[48%] xl:w-[46%] bg-[#f4f7f0] rounded-[24px] border border-[#e9eedc] p-6 lg:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col">
             <div className="text-center mb-6">
               <h3 className="text-[32px] md:text-[38px] font-serif text-[#11160e] mb-3">
                 {data.form.title_line1} <span className="text-[#4a6336]">{data.form.title_highlight}</span>
@@ -157,12 +157,13 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
             </div>
 
             <form 
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4" 
+              className="flex flex-1 flex-col" 
               onSubmit={(e) => {
                 e.preventDefault();
                 window.location.href = '/thank-you';
               }}
             >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
                 <label className="text-[13px] font-bold text-[#2d3a24]">Full Name*</label>
                 <div className="relative">
@@ -263,7 +264,8 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
                 </div>
               </div>
 
-              <div className="sm:col-span-2 mt-2">
+              </div>
+              <div className="mt-auto pt-4">
                 <button type="submit" className="w-full bg-[#4a6336] text-white py-3.5 rounded-full font-bold text-[15px] flex items-center justify-center gap-2 hover:bg-[#3b4f2b] transition-all shadow-[0_4px_14px_rgba(74,99,54,0.3)] hover:shadow-[0_6px_20px_rgba(74,99,54,0.4)]">
                   <div className="bg-white rounded-full p-1 text-[#4a6336]">
                     <ArrowUpRight size={16} strokeWidth={2.5} />

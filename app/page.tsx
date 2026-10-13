@@ -9,8 +9,6 @@ import VideoPromo from '@/components/sections/VideoPromo';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import Packages from '@/components/sections/Packages';
 import Testimonials from '@/components/sections/Testimonials';
-import CTA from '@/components/sections/CTA';
-
 export const metadata = {
   title: pages.home.metadata.title,
 };
@@ -27,7 +25,6 @@ export default function Home() {
         <WhyChooseUs data={sections.feature} />
         <Packages data={sections.packages} />
         <Testimonials data={sections.testimonials} />
-        <CTA data={sections.cta} />
       </main>
       <Footer data={common.Footer} />
     </div>
