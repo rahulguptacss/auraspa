@@ -183,8 +183,9 @@ export default function BookAppointment({ data }: BookAppointmentProps) {
                   <input 
                     type="tel" 
                     placeholder="Enter Phone Number" 
-                    onInput={(e) => {
-                      e.currentTarget.value = e.currentTarget.value.replace(/[^0-9+-\s()]/g, '');
+                    inputMode="numeric"
+                    onChange={(event) => {
+                      event.target.value = event.target.value.replace(/\D/g, '');
                     }}
                     className="w-full bg-white border border-[#e4eadb] rounded-[12px] py-3 pl-11 pr-4 text-[14px] outline-none focus:border-[#4a6336] focus:ring-1 focus:ring-[#4a6336] transition-all" 
                   />

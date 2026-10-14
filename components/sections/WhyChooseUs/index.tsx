@@ -168,55 +168,26 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-5 items-stretch"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
-              {/* Points Block (Light Green) */}
-              <div className="md:col-span-7 bg-[#f0f3eb] rounded-[24px] p-6 lg:p-7 flex flex-col justify-between h-full gap-6">
-                {data.points.map((point, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + idx * 0.15, duration: 0.5 }}
-                    className={`flex gap-4 group cursor-pointer ${idx !== data.points.length - 1 ? 'pb-6 border-b border-[#e1e8d9]' : ''}`}
-                  >
-                    <div className="w-[52px] h-[52px] flex-shrink-0 rounded-full flex items-center justify-center text-[#1a1f17] bg-gradient-to-br from-white via-[#e8efe0] to-[#cbd7be] border border-[#d3ddc5] shadow-sm group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                      {iconMap[point.icon]}
-                    </div>
-                    <div className="flex flex-col pt-1">
-                      <h4 className="text-[15px] font-bold text-[#1a1f17] mb-1 leading-tight group-hover:text-[#485f38] transition-colors duration-300">
-                        {point.title}
-                      </h4>
-                      <p className="text-[#737b6d] text-[13px] leading-relaxed group-hover:text-[#52594e] transition-colors duration-300">
-                        {point.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Stats Block (Dark Green) */}
-              <div className="md:col-span-5 bg-[#24351c] rounded-[24px] p-6 lg:p-7 flex flex-col justify-between h-full">
-                {data.stats.map((stat, idx) => (
-                  <motion.div 
-                    key={idx} 
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.5 + idx * 0.15, duration: 0.5 }}
-                    className={`flex items-center gap-4 group cursor-pointer ${idx !== data.stats.length - 1 ? 'pb-5 mb-5 border-b border-[#3b4d32]' : ''}`}
-                  >
-                    <div className="text-white w-[32px] flex justify-center flex-shrink-0 opacity-95 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-300">
-                      {iconMap[stat.icon]}
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-[34px] lg:text-[38px] font-semibold text-white leading-none tracking-tight group-hover:text-[#c4d7b6] transition-colors duration-300">{stat.value}</span>
-                      <span className="text-[11px] lg:text-[12px] text-[#a4b899] leading-[1.3] whitespace-pre-line group-hover:text-white transition-colors duration-300">{stat.label}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              {data.points.map((point, idx) => (
+                <motion.div
+                  key={point.title}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.15 * idx }}
+                  className="flex gap-4 rounded-[24px] bg-[#f0f3eb] p-5"
+                >
+                  <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#d3ddc5] bg-gradient-to-br from-white via-[#e8efe0] to-[#cbd7be] text-[#1a1f17]">
+                    {iconMap[point.icon]}
+                  </div>
+                  <div>
+                    <h4 className="text-[15px] font-bold leading-tight text-[#1a1f17]">{point.title}</h4>
+                    <p className="mt-1 text-[13px] leading-relaxed text-[#737b6d]">{point.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
 
           </div>

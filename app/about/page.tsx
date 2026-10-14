@@ -17,7 +17,7 @@ export default function AboutPage() {
       <Header data={common.Header} />
       <main className="w-full flex-1">
         <Breadcrumb title={pages.about?.title || "About Us"} breadcrumb="ABOUT" />
-        <About data={sections.about} />
+        <About data={sections.about} hideButton />
         <Team data={sections.team} />
         <WhyChooseUs data={sections.feature} />
       </main>

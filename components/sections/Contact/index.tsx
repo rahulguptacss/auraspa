@@ -138,7 +138,7 @@ export default function Contact({ data }: ContactProps) {
                   <div className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">
                     <Phone size={18} />
                   </div>
-                  <input type="tel" placeholder={data.form.phone_placeholder} className="w-full bg-white border border-[#e4eadb] rounded-xl py-3.5 pl-12 pr-4 text-[14px] outline-none focus:border-[#4a6336] transition-all" />
+                  <input type="tel" inputMode="numeric" placeholder={data.form.phone_placeholder} onChange={(event) => { event.target.value = event.target.value.replace(/\D/g, ''); }} className="w-full bg-white border border-[#e4eadb] rounded-xl py-3.5 pl-12 pr-4 text-[14px] outline-none focus:border-[#4a6336] transition-all" />
                 </div>
                 <div className="relative">
                   <div className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">

@@ -874,6 +874,16 @@
                   "title": "Personalized Treatments",
                   "description": "Every session is customized to meet your unique wellness needs.",
                   "icon": "Lotus"
+                },
+                {
+                  "title": "Natural Ingredients",
+                  "description": "We use gentle, plant-based products chosen for calm and healthy skin.",
+                  "icon": "Leaf"
+                },
+                {
+                  "title": "Peaceful Environment",
+                  "description": "A quiet space designed so you can slow down and fully relax.",
+                  "icon": "Smile"
                 }
               ],
               "stats": [

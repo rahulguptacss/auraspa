@@ -44,7 +44,7 @@ function Counter({ value }: { value: string }) {
   );
 }
 
-export default function About({ data }: AboutProps) {
+export default function About({ data, hideButton = false }: AboutProps & { hideButton?: boolean }) {
   // Utility to split the label so it breaks like the screenshot
   const formatLabel = (label: string) => {
     const parts = label.split(' ');
@@ -130,12 +130,14 @@ export default function About({ data }: AboutProps) {
               ))}
             </div>
 
-            <Link
-              href={data.button.href}
-              className="inline-flex items-center justify-center gap-2 bg-[#4a5e3d] text-white px-7 py-3.5 rounded-full text-[15px] font-medium transition-colors hover:bg-[#344529] shadow-md"
-            >
-              Know More About Us <ArrowRight size={18} />
-            </Link>
+            {!hideButton && (
+              <Link
+                href={data.button.href}
+                className="inline-flex items-center justify-center gap-2 bg-[#4a5e3d] text-white px-7 py-3.5 rounded-full text-[15px] font-medium transition-colors hover:bg-[#344529] shadow-md"
+              >
+                {data.button.text} <ArrowRight size={18} />
+              </Link>
+            )}
           </div>
         </div>
       </div>
