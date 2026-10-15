@@ -2,8 +2,6 @@ import React from 'react';
 import Header from '@/components/sections/Header';
 import Breadcrumb from '@/components/sections/Breadcrumb';
 import BookAppointment from '@/components/sections/BookAppointment';
-import Packages from '@/components/sections/Packages';
-import Testimonials from '@/components/sections/Testimonials';
 import Footer from '@/components/sections/Footer';
 import { common, sections } from '@/components/types';
 
@@ -19,8 +17,6 @@ export default function BookAppointmentPage() {
       <main className="w-full flex-1">
         <Breadcrumb title="Book A Appointment" breadcrumb="HOME / BOOK A APPOINTMENT" />
         <BookAppointment data={(sections as any).bookAppointment} />
-        <Packages data={(sections as any).packages} />
-        <Testimonials data={(sections as any).testimonials} />
       </main>
       <Footer data={common.Footer} />
     </div>
