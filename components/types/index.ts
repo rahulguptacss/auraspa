@@ -4,6 +4,7 @@ export interface LinkType {
   name: string;
   href: string;
   active?: boolean;
+  children?: LinkType[];
 }
 
 export interface HeaderData {
