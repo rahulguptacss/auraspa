@@ -11,81 +11,11 @@
         },
         {
           "name": "About Us",
-          "href": "/about",
-          "children": [
-            {
-              "name": "Our Story",
-              "href": "/about"
-            },
-            {
-              "name": "Spa Packages",
-              "href": "/packages"
-            },
-            {
-              "name": "Photo Gallery",
-              "href": "/gallery"
-            },
-            {
-              "name": "Client FAQs",
-              "href": "/faqs"
-            }
-          ]
+          "href": "/about"
         },
         {
           "name": "Services",
-          "href": "/services",
-          "children": [
-            {
-              "name": "Massage Therapies",
-              "href": "/services",
-              "children": [
-                {
-                  "name": "Full Body Massage",
-                  "href": "/services/full-body-massage"
-                },
-                {
-                  "name": "Hot Stone Therapy",
-                  "href": "/services/hot-stone-therapy"
-                },
-                {
-                  "name": "Foot Reflexology",
-                  "href": "/services/foot-reflexology"
-                }
-              ]
-            },
-            {
-              "name": "Body & Skin Care",
-              "href": "/services",
-              "children": [
-                {
-                  "name": "Facial Treatments",
-                  "href": "/services/facial-treatments"
-                },
-                {
-                  "name": "Body Scrub",
-                  "href": "/services/body-scrub"
-                },
-                {
-                  "name": "Body Wrap",
-                  "href": "/services/body-wrap"
-                }
-              ]
-            },
-            {
-              "name": "Wellness & Healing",
-              "href": "/services",
-              "children": [
-                {
-                  "name": "Aromatherapy",
-                  "href": "/services/aromatherapy"
-                },
-                {
-                  "name": "Couple Spa",
-                  "href": "/services/couple-spa"
-                }
-              ]
-            }
-          ]
+          "href": "/services"
         },
         {
           "name": "Packages",
