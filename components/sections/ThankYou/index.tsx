@@ -28,7 +28,7 @@ export default function ThankYou({ data }: ThankYouProps) {
 
       <div className="relative z-10 w-full max-w-[650px] mx-auto px-4">
         {/* Card */}
-        <div className="bg-[#f5f8ef] rounded-[24px] px-8 py-8 md:py-8 text-center relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] border border-white/50">
+        <div className="bg-[#fbf7f5] rounded-[24px] px-8 py-8 md:py-8 text-center relative overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] border border-white/50">
           
           {/* Watermarks */}
           <div className="absolute top-0 left-0 opacity-[0.25] w-48 h-48 pointer-events-none -translate-x-1/4 -translate-y-1/4 rotate-180">
@@ -39,20 +39,20 @@ export default function ThankYou({ data }: ThankYouProps) {
           </div>
 
           {/* Checkmark Circle */}
-          <div className="relative inline-flex items-center justify-center w-24 h-24 bg-[#e8ecd9] rounded-full mb-4 z-10">
-            <div className="w-16 h-16 bg-[#4f673a] rounded-full flex items-center justify-center text-white shadow-md">
+          <div className="relative inline-flex items-center justify-center w-24 h-24 bg-[#f0e2dc] rounded-full mb-4 z-10">
+            <div className="w-16 h-16 bg-[#4a211c] rounded-full flex items-center justify-center text-white shadow-md">
               <Check size={32} strokeWidth={3} />
             </div>
             
             {/* Side leaves decorations */}
-            <div className="absolute -left-10 top-1/2 -translate-y-1/2 text-[#4f673a] w-8 h-8">
+            <div className="absolute -left-10 top-1/2 -translate-y-1/2 text-[#4a211c] w-8 h-8">
                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                  <path d="M17.5 12C12.5 14 10.4 20 10.4 20C10.4 20 13.5 14.5 21.5 12Z"/>
                  <path d="M17 18C12 19 9.9 23 9.9 23C9.9 23 12 20 17 18Z"/>
                  <path d="M16 6C11 8 8.9 14 8.9 14C8.9 14 12 8.5 20 6Z"/>
                </svg>
             </div>
-            <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[#4f673a] w-8 h-8 scale-x-[-1]">
+            <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[#4a211c] w-8 h-8 scale-x-[-1]">
                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
                  <path d="M17.5 12C12.5 14 10.4 20 10.4 20C10.4 20 13.5 14.5 21.5 12Z"/>
                  <path d="M17 18C12 19 9.9 23 9.9 23C9.9 23 12 20 17 18Z"/>
@@ -61,18 +61,18 @@ export default function ThankYou({ data }: ThankYouProps) {
             </div>
           </div>
 
-          <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#11160e] mb-2 z-10 relative leading-none tracking-tight">
+          <h2 className="text-[40px] md:text-[48px] font-serif font-bold text-[#2b120f] mb-2 z-10 relative leading-none tracking-tight">
             {data.title}
           </h2>
 
           {/* Divider */}
           <div className="flex justify-center items-center gap-3 mb-4 relative z-10">
-            <span className="w-10 h-[1.5px] bg-[#4f673a]"></span>
-            <LotusIcon size={16} className="text-[#4f673a]" />
-            <span className="w-10 h-[1.5px] bg-[#4f673a]"></span>
+            <span className="w-10 h-[1.5px] bg-[#4a211c]"></span>
+            <LotusIcon size={16} className="text-[#4a211c]" />
+            <span className="w-10 h-[1.5px] bg-[#4a211c]"></span>
           </div>
 
-          <h3 className="text-[18px] md:text-[20px] font-bold text-[#4f673a] mb-3 relative z-10">
+          <h3 className="text-[18px] md:text-[20px] font-bold text-[#4a211c] mb-3 relative z-10">
             {data.subtitle}
           </h3>
 
@@ -81,7 +81,7 @@ export default function ThankYou({ data }: ThankYouProps) {
           </p>
 
           <Link href={data.button.href}>
-            <button className="bg-[#4f673a] text-white py-3 px-8 rounded-full font-bold text-[15px] inline-flex items-center justify-center gap-3 hover:bg-[#3b4f2b] transition-all shadow-lg hover:shadow-xl relative z-10">
+            <button className="bg-[#4a211c] text-white py-3 px-8 rounded-full font-bold text-[15px] inline-flex items-center justify-center gap-3 hover:bg-[#311310] transition-all shadow-lg hover:shadow-xl relative z-10">
               <ArrowLeft size={18} strokeWidth={2.5} />
               {data.button.text}
             </button>

@@ -70,8 +70,12 @@ export default function Footer({ data }: FooterProps) {
     }
   };
 
+  const half = Math.ceil((data.quick_links?.length || 0) / 2);
+  const quickLinksCol1 = data.quick_links?.slice(0, half) || [];
+  const quickLinksCol2 = data.quick_links?.slice(half) || [];
+
   return (
-    <footer className="bg-[#293623] text-[#dcdcdc] pt-10 pb-6 relative overflow-hidden border-t-4 border-[#d6a655]">
+    <footer className="bg-[#311310] text-[#dcdcdc] pt-10 pb-6 relative overflow-hidden border-t-4 border-[#b66f50]">
 
       {/* Container */}
       <motion.div 
@@ -82,11 +86,11 @@ export default function Footer({ data }: FooterProps) {
         viewport={{ once: true, amount: 0.1 }}
       >
 
-        {/* Top Grid */}
+        {/* Top Grid (3 Balanced Columns: 4 cols, 5 cols, 3 cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 mb-8">
 
-          {/* Column 1: Logo & About */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 lg:pr-10 lg:border-r border-[#ffffff20] border-b lg:border-b-0 pb-8 lg:pb-0 mb-2 lg:mb-0">
+          {/* Column 1: Logo & About (4 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-4 lg:pr-10 lg:border-r border-[#ffffff20] border-b lg:border-b-0 pb-8 lg:pb-0 mb-2 lg:mb-0">
             <Link href="/" className="flex items-center mb-2 lg:mb-0 -mt-4 lg:-mt-6">
               <Image
                 src="/logo/logo.webp"
@@ -96,7 +100,7 @@ export default function Footer({ data }: FooterProps) {
                 className="w-auto h-28 object-contain"
               />
             </Link>
-            <p className="text-[#c0c0c0] text-[14px] leading-[1.8] mb-5 max-w-[280px]">
+            <p className="text-[#c0c0c0] text-[14px] leading-[1.8] mb-5 max-w-[320px]">
               {data.description}
             </p>
             <div className="flex gap-4">
@@ -104,7 +108,7 @@ export default function Footer({ data }: FooterProps) {
                 <a
                   key={idx}
                   href={social.href}
-                  className="w-10 h-10 rounded-full border border-[#d6a655] flex items-center justify-center text-white hover:bg-[#d6a655] hover:text-[#2a3c26] transition-colors"
+                  className="w-10 h-10 rounded-full border border-[#b66f50] flex items-center justify-center text-white hover:bg-[#b66f50] hover:text-[#311310] transition-colors"
                 >
                   {iconMap[social.icon]}
                 </a>
@@ -112,90 +116,78 @@ export default function Footer({ data }: FooterProps) {
             </div>
           </motion.div>
 
-          {/* Column 2: Quick Links */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 lg:px-8 lg:border-r border-[#ffffff20] border-b lg:border-b-0 py-5 lg:py-0">
+          {/* Column 2: Quick Links (5 cols with 2 sub-columns) */}
+          <motion.div variants={itemVariants} className="lg:col-span-5 lg:px-8 xl:px-10 lg:border-r border-[#ffffff20] border-b lg:border-b-0 py-5 lg:py-0">
             <div 
               className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleSection('quick_links')}
             >
               <h4 className="text-[20px] lg:text-[22px] font-serif text-white m-0 lg:mb-2">{data.quick_links ? "Quick Links" : ""}</h4>
-              <ChevronDown className={`lg:hidden text-[#d6a655] transition-transform ${openSection === 'quick_links' ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`lg:hidden text-[#b66f50] transition-transform ${openSection === 'quick_links' ? 'rotate-180' : ''}`} />
             </div>
-            <div className="hidden lg:block w-8 h-[2px] bg-[#d6a655] mb-6"></div>
+            <div className="hidden lg:block w-8 h-[2px] bg-[#b66f50] mb-6"></div>
             <div className={`overflow-hidden transition-all duration-300 lg:max-h-none lg:opacity-100 ${openSection === 'quick_links' ? 'max-h-[500px] opacity-100 mt-5' : 'max-h-0 opacity-0 lg:mt-0'}`}>
-              <ul className="space-y-4 pb-2 lg:pb-0">
-                {data.quick_links?.map((link, idx) => (
-                  <li key={idx}>
-                    <Link href={link.href} className="text-[#dcdcdc] text-[15px] hover:text-[#d6a655] transition-colors flex items-center gap-3 whitespace-nowrap">
-                      <LotusIcon className="text-[#d6a655] shrink-0" size={16} />
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-3.5 pb-2 lg:pb-0">
+                <ul className="space-y-3.5">
+                  {quickLinksCol1.map((link, idx) => (
+                    <li key={idx}>
+                      <Link href={link.href} className="text-[#dcdcdc] text-[14.5px] hover:text-[#b66f50] transition-colors flex items-center gap-2.5 whitespace-nowrap">
+                        <LotusIcon className="text-[#b66f50] shrink-0" size={15} />
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="space-y-3.5">
+                  {quickLinksCol2.map((link, idx) => (
+                    <li key={idx}>
+                      <Link href={link.href} className="text-[#dcdcdc] text-[14.5px] hover:text-[#b66f50] transition-colors flex items-center gap-2.5 whitespace-nowrap">
+                        <LotusIcon className="text-[#b66f50] shrink-0" size={15} />
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
 
-          {/* Column 3: Our Services */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 lg:px-8 lg:border-r border-[#ffffff20] border-b lg:border-b-0 py-5 lg:py-0">
-            <div 
-              className="flex justify-between items-center cursor-pointer lg:cursor-default"
-              onClick={() => toggleSection('our_services')}
-            >
-              <h4 className="text-[20px] lg:text-[22px] font-serif text-white m-0 lg:mb-2">{data.our_services ? "Our Services" : ""}</h4>
-              <ChevronDown className={`lg:hidden text-[#d6a655] transition-transform ${openSection === 'our_services' ? 'rotate-180' : ''}`} />
-            </div>
-            <div className="hidden lg:block w-8 h-[2px] bg-[#d6a655] mb-6"></div>
-            <div className={`overflow-hidden transition-all duration-300 lg:max-h-none lg:opacity-100 ${openSection === 'our_services' ? 'max-h-[500px] opacity-100 mt-5' : 'max-h-0 opacity-0 lg:mt-0'}`}>
-              <ul className="space-y-4 pb-2 lg:pb-0">
-                {data.our_services?.map((service, idx) => (
-                  <li key={idx}>
-                    <Link href={service.href} className="text-[#dcdcdc] text-[15px] hover:text-[#d6a655] transition-colors flex items-center gap-3 whitespace-nowrap">
-                      <LotusIcon className="text-[#d6a655] shrink-0" size={16} />
-                      {service.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Column 4: Contact Info */}
-          <motion.div variants={itemVariants} className="lg:col-span-3 lg:pl-10 py-5 lg:py-0">
+          {/* Column 3: Contact Info (3 cols) */}
+          <motion.div variants={itemVariants} className="lg:col-span-3 lg:pl-8 xl:pl-10 py-5 lg:py-0">
             <div 
               className="flex justify-between items-center cursor-pointer lg:cursor-default"
               onClick={() => toggleSection('contact_info')}
             >
               <h4 className="text-[20px] lg:text-[22px] font-serif text-white m-0 lg:mb-2">Contact Information</h4>
-              <ChevronDown className={`lg:hidden text-[#d6a655] transition-transform ${openSection === 'contact_info' ? 'rotate-180' : ''}`} />
+              <ChevronDown className={`lg:hidden text-[#b66f50] transition-transform ${openSection === 'contact_info' ? 'rotate-180' : ''}`} />
             </div>
-            <div className="hidden lg:block w-8 h-[2px] bg-[#d6a655] mb-6"></div>
+            <div className="hidden lg:block w-8 h-[2px] bg-[#b66f50] mb-6"></div>
             <div className={`overflow-hidden transition-all duration-300 lg:max-h-none lg:opacity-100 ${openSection === 'contact_info' ? 'max-h-[800px] opacity-100 mt-5' : 'max-h-0 opacity-0 lg:mt-0'}`}>
               <ul className="space-y-4 pb-2 lg:pb-0">
                 <li className="flex gap-4 items-start">
-                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#d6a655] flex items-center justify-center text-[#d6a655]">
+                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#b66f50] flex items-center justify-center text-[#b66f50]">
                     <MapPin size={18} />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[#d6a655] font-medium text-[15px] mb-1">{data.contact.address_label}</span>
+                    <span className="text-[#b66f50] font-medium text-[15px] mb-1">{data.contact.address_label}</span>
                     <span className="text-[#dcdcdc] text-[14px] leading-relaxed whitespace-pre-line">{data.contact.address}</span>
                   </div>
                 </li>
                 <li className="flex gap-4 items-start">
-                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#d6a655] flex items-center justify-center text-[#d6a655]">
+                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#b66f50] flex items-center justify-center text-[#b66f50]">
                     <Phone size={18} />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[#d6a655] font-medium text-[15px] mb-1">{data.contact.phone_label}</span>
+                    <span className="text-[#b66f50] font-medium text-[15px] mb-1">{data.contact.phone_label}</span>
                     <a href={`tel:${data.contact.phone.replace(/[^\d+]/g, '')}`} className="text-[#dcdcdc] text-[14px] hover:text-white transition-colors">{data.contact.phone}</a>
                   </div>
                 </li>
                 <li className="flex gap-4 items-start">
-                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#d6a655] flex items-center justify-center text-[#d6a655]">
+                  <div className="w-10 h-10 shrink-0 rounded-full border border-[#b66f50] flex items-center justify-center text-[#b66f50]">
                     <Mail size={18} />
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[#d6a655] font-medium text-[15px] mb-1">{data.contact.email_label}</span>
+                    <span className="text-[#b66f50] font-medium text-[15px] mb-1">{data.contact.email_label}</span>
                     <a href={`mailto:${data.contact.email}`} className="text-[#dcdcdc] text-[14px] hover:text-white transition-colors">{data.contact.email}</a>
                   </div>
                 </li>
@@ -222,7 +214,7 @@ export default function Footer({ data }: FooterProps) {
             exit={{ opacity: 0, y: 20 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="fixed bottom-8 right-8 z-50 p-3 bg-[#d6a655] text-white rounded-full shadow-lg hover:bg-[#c59648] transition-colors focus:outline-none"
+            className="fixed bottom-8 right-8 z-50 p-3 bg-[#b66f50] text-white rounded-full shadow-lg hover:bg-[#c77c5d] transition-colors focus:outline-none cursor-pointer"
             aria-label="Back to top"
           >
             <ChevronUp size={24} />

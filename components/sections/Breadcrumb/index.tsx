@@ -14,7 +14,7 @@ export default function Breadcrumb({ title, breadcrumb }: BreadcrumbProps) {
     <section className="relative h-[260px] lg:h-[300px] flex items-center justify-center pt-20">
       <div className="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Header Background" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#293623]/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#311310]/80 mix-blend-multiply" />
       </div>
 
       <div className="relative z-10 text-center flex flex-col items-center mt-10">
@@ -33,7 +33,7 @@ export default function Breadcrumb({ title, breadcrumb }: BreadcrumbProps) {
           className="flex items-center gap-3 text-white/90 text-sm md:text-[15px] tracking-[0.2em] uppercase font-medium"
         >
           <Link href="/" className="hover:text-white transition-colors">HOME</Link>
-          <span className="text-[#d7ad64]">/</span>
+          <span className="text-[#b66f50]">/</span>
           <span className="text-white">{breadcrumb}</span>
         </motion.div>
       </div>

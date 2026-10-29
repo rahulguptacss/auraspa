@@ -22,7 +22,7 @@ export interface FooterData {
   description: string;
   socials: { icon: string; href: string }[];
   quick_links: LinkType[];
-  our_services: LinkType[];
+  our_services?: LinkType[];
   contact: { address_label?: string; address: string; phone_label?: string; phone: string; email_label?: string; email: string };
   copyright: string;
 }
@@ -74,7 +74,7 @@ export interface ServicesSectionData {
   subtitle: string;
   title_line1: string;
   description: string;
-  button: { text: string; href: string };
+  button?: { text: string; href: string };
   items: ServiceItem[];
 }
 

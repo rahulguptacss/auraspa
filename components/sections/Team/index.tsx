@@ -18,7 +18,7 @@ const LotusIcon = ({ size = 24, className = "" }) => (
 
 export default function Team({ data }: TeamProps) {
   return (
-    <section className="py-10 lg:py-14 relative bg-[#f9fbf6] overflow-hidden">
+    <section id="team" className="py-10 lg:py-14 relative bg-[#fbf7f5] overflow-hidden scroll-mt-20">
       {/* Background Graphic */}
       <div className="absolute left-0 top-0 opacity-10 pointer-events-none transform -translate-x-1/4 -translate-y-1/4">
         <img src={data.decoration_image} alt="Leaf" className="w-[400px] lg:w-[600px] h-auto object-contain" />
@@ -35,15 +35,15 @@ export default function Team({ data }: TeamProps) {
             className="flex flex-col items-center mb-4"
           >
             <div className="flex justify-center items-center gap-2 mb-2 w-full">
-              <span className="w-12 sm:w-24 h-[1px] bg-[#d7ad64] opacity-50"></span>
-              <div className="w-1.5 h-1.5 rotate-45 bg-[#d7ad64] opacity-60"></div>
-              <div className="text-[#d7ad64] px-1">
+              <span className="w-12 sm:w-24 h-[1px] bg-[#b66f50] opacity-50"></span>
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#b66f50] opacity-60"></div>
+              <div className="text-[#b66f50] px-1">
                 <LotusIcon size={22} />
               </div>
-              <div className="w-1.5 h-1.5 rotate-45 bg-[#d7ad64] opacity-60"></div>
-              <span className="w-12 sm:w-24 h-[1px] bg-[#d7ad64] opacity-50"></span>
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#b66f50] opacity-60"></div>
+              <span className="w-12 sm:w-24 h-[1px] bg-[#b66f50] opacity-50"></span>
             </div>
-            <span className="text-[#a57f36] font-medium tracking-[0.25em] text-[12px] sm:text-[13px] uppercase">
+            <span className="text-[#b66f50] font-bold tracking-[0.25em] text-[12px] sm:text-[13px] uppercase">
               {data.subtitle}
             </span>
           </motion.div>
@@ -53,9 +53,9 @@ export default function Team({ data }: TeamProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[38px] md:text-[46px] lg:text-[54px] font-serif text-[#293623] mb-4 leading-[1.2]"
+            className="text-[38px] md:text-[46px] lg:text-[54px] font-serif text-[#2b120f] mb-4 leading-[1.2]"
           >
-            {data.title_line1} <span className="text-[#a57f36]">{data.title_highlight}</span>
+            {data.title_line1} <span className="text-[#4a211c]">{data.title_highlight}</span>
           </motion.h2>
           
           <motion.p 
@@ -63,7 +63,7 @@ export default function Team({ data }: TeamProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-[#596558] text-[15px] sm:text-[16px] max-w-[650px] mx-auto leading-relaxed"
+            className="text-[#69524d] text-[15px] sm:text-[16px] max-w-[650px] mx-auto leading-relaxed"
           >
             {data.description}
           </motion.p>
@@ -78,7 +78,7 @@ export default function Team({ data }: TeamProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="flex flex-col group relative rounded-[20px] overflow-hidden bg-[#fcfaf5] shadow-[0_4px_20px_rgb(0,0,0,0.05)] border border-[#f5f0e6] hover:-translate-y-2 transition-transform duration-300"
+              className="flex flex-col group relative rounded-[20px] overflow-hidden bg-white shadow-xs border border-[#e5d3cc]/60 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
               <div className="w-full h-[250px] sm:h-[280px] relative">
                 <img 
@@ -88,31 +88,31 @@ export default function Team({ data }: TeamProps) {
                 />
               </div>
               
-              <div className="bg-[#fcfaf5] w-full -mt-6 relative z-10 rounded-t-[20px] pt-4 px-4 pb-5 flex flex-col items-center">
-                <h3 className="text-[20px] font-serif text-[#162013] font-medium mb-0.5">
+              <div className="bg-white w-full -mt-6 relative z-10 rounded-t-[20px] pt-4 px-4 pb-5 flex flex-col items-center">
+                <h3 className="text-[20px] font-serif text-[#2b120f] font-medium mb-0.5">
                   {member.name}
                 </h3>
-                <span className="text-[#a57f36] text-[10.5px] font-bold tracking-[0.1em] uppercase mb-2 block">
+                <span className="text-[#b66f50] text-[10.5px] font-bold tracking-[0.1em] uppercase mb-2 block">
                   {member.role}
                 </span>
                 
-                <span className="w-10 h-[1.5px] bg-[#d7ad64] mb-2.5 opacity-70"></span>
+                <span className="w-10 h-[1.5px] bg-[#b66f50] mb-2.5 opacity-70"></span>
                 
-                <p className="text-[#596558] text-[13px] leading-[1.5] mb-4 text-center">
+                <p className="text-[#69524d] text-[13px] leading-[1.5] mb-4 text-center">
                   {member.description}
                 </p>
                 
                 <div className="flex items-center justify-center gap-3">
-                  <a href={member.socials.facebook} className="w-[34px] h-[34px] rounded-full bg-[#f4ebe1] text-[#785b2c] flex items-center justify-center hover:bg-[#a57f36] hover:text-white transition-colors">
+                  <a href={member.socials.facebook} className="w-[34px] h-[34px] rounded-full bg-[#f6ece8] text-[#4a211c] flex items-center justify-center hover:bg-[#4a211c] hover:text-white transition-colors">
                     <FaFacebookF size={13} />
                   </a>
-                  <a href={member.socials.instagram} className="w-[34px] h-[34px] rounded-full bg-[#f4ebe1] text-[#785b2c] flex items-center justify-center hover:bg-[#a57f36] hover:text-white transition-colors">
+                  <a href={member.socials.instagram} className="w-[34px] h-[34px] rounded-full bg-[#f6ece8] text-[#4a211c] flex items-center justify-center hover:bg-[#4a211c] hover:text-white transition-colors">
                     <FaInstagram size={13} />
                   </a>
-                  <a href={member.socials.linkedin} className="w-[34px] h-[34px] rounded-full bg-[#f4ebe1] text-[#785b2c] flex items-center justify-center hover:bg-[#a57f36] hover:text-white transition-colors">
+                  <a href={member.socials.linkedin} className="w-[34px] h-[34px] rounded-full bg-[#f6ece8] text-[#4a211c] flex items-center justify-center hover:bg-[#4a211c] hover:text-white transition-colors">
                     <FaLinkedinIn size={13} />
                   </a>
-                  <a href={member.socials.email} className="w-[34px] h-[34px] rounded-full bg-[#f4ebe1] text-[#785b2c] flex items-center justify-center hover:bg-[#a57f36] hover:text-white transition-colors">
+                  <a href={member.socials.email} className="w-[34px] h-[34px] rounded-full bg-[#f6ece8] text-[#4a211c] flex items-center justify-center hover:bg-[#4a211c] hover:text-white transition-colors">
                     <FaEnvelope size={13} />
                   </a>
                 </div>

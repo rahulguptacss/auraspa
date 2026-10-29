@@ -2,20 +2,64 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2b120f;
+
+  /* Terracotta & Deep Mahogany Palette (#4A211C & #B66F50) */
+  --primary: #4a211c;
+  --primary-dark: #311310;
+  --primary-light: #66322b;
+  --primary-hover: #3d1b17;
+  --primary-subtle: #fbf7f5;
+
+  --secondary: #b66f50;
+  --secondary-light: #c77c5d;
+  --secondary-dark: #9d593c;
+
+  --accent: #b66f50;
+  --accent-hover: #c77c5d;
+
+  --tint-bg: #fbf7f5;
+  --tint-card: #f6ece8;
+  --tint-soft: #f0e2dc;
+  --tint-border: #e5d3cc;
+
+  --text-dark: #2b120f;
+  --text-body: #69524d;
+  --text-muted: #8a716c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-subtle: var(--primary-subtle);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-tint-bg: var(--tint-bg);
+  --color-tint-card: var(--tint-card);
+  --color-tint-soft: var(--tint-soft);
+  --color-tint-border: var(--tint-border);
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --color-text-muted: var(--text-muted);
   --font-sans: var(--font-outfit), sans-serif;
   --font-serif: var(--font-playfair), serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f0b09;
+    --foreground: #fbf7f5;
   }
 }
 

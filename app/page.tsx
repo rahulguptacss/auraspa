@@ -7,10 +7,16 @@ import About from '@/components/sections/About';
 import Services from '@/components/sections/Services';
 import VideoPromo from '@/components/sections/VideoPromo';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
-import Packages from '@/components/sections/Packages';
+import PackageGrid from '@/components/sections/PackageGrid';
+import Gallery from '@/components/sections/Gallery';
+import Team from '@/components/sections/Team';
 import Testimonials from '@/components/sections/Testimonials';
+import FAQ from '@/components/sections/FAQ';
+import BookAppointment from '@/components/sections/BookAppointment';
+
 export const metadata = {
-  title: pages.home.metadata.title,
+  title: pages.home?.metadata?.title || 'Serenity Spa - Relax, Refresh & Rejuvenate',
+  description: 'Experience ultimate relaxation and therapeutic care at Serenity Spa with our complete range of wellness treatments.',
 };
 
 export default function Home() {
@@ -21,10 +27,14 @@ export default function Home() {
         <Hero data={sections.hero} />
         <About data={sections.about} />
         <Services data={sections.services} />
-        <VideoPromo data={sections.videoPromo} />
         <WhyChooseUs data={sections.feature} />
-        <Packages data={sections.packages} />
+        <VideoPromo data={sections.videoPromo} />
+        <PackageGrid data={(sections as any).packageGrid} />
+        <Gallery data={sections.gallery} />
+        <Team data={sections.team} />
         <Testimonials data={sections.testimonials} />
+        <FAQ data={sections.faq} />
+        <BookAppointment data={(sections as any).bookAppointment} />
       </main>
       <Footer data={common.Footer} />
     </div>

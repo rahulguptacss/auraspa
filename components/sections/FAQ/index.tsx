@@ -23,36 +23,33 @@ export default function FAQ({ data }: FAQProps) {
   };
 
   return (
-    <section className="py-10 md:py-16 bg-[#f6f3ec] relative overflow-hidden" id="faq">
+    <section className="py-10 md:py-16 bg-[#fbf7f5] relative overflow-hidden scroll-mt-20" id="faqs">
       <div className="absolute inset-0 pointer-events-none" aria-hidden>
-        <img src="/img/sectionbg.webp" alt="" className="h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(246,243,236,0.72),rgba(244,247,240,0.88))]" />
-        <div
-          className="absolute inset-0 opacity-50"
-          style={{ backgroundImage: 'radial-gradient(rgba(74,99,54,0.28) 0.7px, transparent 0.7px)', backgroundSize: '16px 16px' }}
-        />
-        <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-[#d7e3c4]/70 blur-3xl" />
-        <div className="absolute -right-10 bottom-8 h-64 w-64 rounded-full bg-[#efe2c4]/80 blur-3xl" />
+        <img src="/img/sectionbg.webp" alt="" className="h-full w-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(244,248,246,0.85),rgba(237,245,241,0.95))]" />
+        <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-[#e5d3cc]/50 blur-3xl" />
+        <div className="absolute -right-10 bottom-8 h-64 w-64 rounded-full bg-[#b66f50]/15 blur-3xl" />
       </div>
 
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header section */}
         <div className="text-center mb-8 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 font-bold text-[#4a6336] uppercase tracking-[0.2em] text-[13px] mb-6">
+          <div className="inline-flex items-center gap-2 font-bold text-[#b66f50] uppercase tracking-[0.2em] text-[13px] mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#b66f50]" />
             {data.subtitle}
           </div>
-          <h2 className="text-[44px] md:text-[56px] font-serif text-[#11160e] leading-[1.1] mb-5 tracking-tight">
-            {data.title_line1} <span className="text-[#4a6336]">{data.title_highlight}</span>
+          <h2 className="text-[44px] md:text-[56px] font-serif text-[#2b120f] leading-[1.1] mb-5 tracking-tight">
+            {data.title_line1} <span className="text-[#4a211c]">{data.title_highlight}</span>
           </h2>
           
-          <div className="flex items-center justify-center gap-3 mb-2 w-full max-w-[500px]">
-            <span className="w-16 h-[1px] bg-[#9eb983]"></span>
-            <LotusIcon size={24} className="text-[#6a8453]" />
-            <span className="w-16 h-[1px] bg-[#9eb983]"></span>
+          <div className="flex items-center justify-center gap-3 mb-3 w-full max-w-[500px]">
+            <span className="w-16 h-[1px] bg-[#b66f50]"></span>
+            <LotusIcon size={24} className="text-[#b66f50]" />
+            <span className="w-16 h-[1px] bg-[#b66f50]"></span>
           </div>
 
-          <p className="text-[#6c7665] text-[16px] md:text-[18px] leading-relaxed max-w-[700px] mx-auto">
+          <p className="text-[#69524d] text-[16px] md:text-[18px] leading-relaxed max-w-[700px] mx-auto">
             {data.description}
           </p>
         </div>
@@ -70,15 +67,15 @@ export default function FAQ({ data }: FAQProps) {
                 {/* Header Row */}
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className={`w-full flex items-center justify-between p-5 text-left transition-colors duration-300 ${
+                  className={`w-full flex items-center justify-between p-5 text-left transition-colors duration-300 cursor-pointer ${
                     isActive 
-                      ? "bg-[#597544] text-white rounded-t-[12px]" 
-                      : "bg-[#f0f3ea] text-[#11160e] rounded-[12px] hover:bg-[#e6ebd9]"
+                      ? "bg-[#4a211c] text-white rounded-t-[12px]" 
+                      : "bg-white text-[#2b120f] border border-[#e5d3cc]/60 rounded-[12px] hover:bg-[#f6ece8]"
                   }`}
                 >
                   <div className="flex items-center gap-4">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-[14px] ${
-                      isActive ? "bg-white/20 text-white" : "bg-[#4a6336] text-white"
+                      isActive ? "bg-white/20 text-white" : "bg-[#4a211c] text-white"
                     }`}>
                       ?
                     </div>
@@ -86,8 +83,8 @@ export default function FAQ({ data }: FAQProps) {
                       {item.q}
                     </span>
                   </div>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-[18px] ${
-                    isActive ? "bg-white text-[#4a6336]" : "bg-[#e2e8d8] text-[#4a6336]"
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-[18px] font-bold ${
+                    isActive ? "bg-[#b66f50] text-white" : "bg-[#f6ece8] text-[#4a211c]"
                   }`}>
                     {isActive ? "-" : "+"}
                   </div>
@@ -102,7 +99,7 @@ export default function FAQ({ data }: FAQProps) {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <div className="bg-[#f5f8ef] text-[#646f5e] p-6 text-[15px] leading-[1.6] rounded-b-[12px] border-x border-b border-[#e9edd9]">
+                      <div className="bg-white text-[#69524d] p-6 text-[15px] leading-[1.6] rounded-b-[12px] border-x border-b border-[#e5d3cc]/60">
                         <div className="pl-12">
                           {item.a}
                         </div>

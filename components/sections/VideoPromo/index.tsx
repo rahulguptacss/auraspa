@@ -26,9 +26,9 @@ const LotusIconOutline = ({ className, size = 24 }: { className?: string, size?:
 );
 
 const iconMap: Record<string, React.ReactNode> = {
-  Leaf: <Leaf className="text-[#32452b]" size={30} strokeWidth={1.5} />,
-  Lotus: <LotusIconOutline className="text-[#32452b]" size={32} />,
-  Database: <StonesIconOutline className="text-[#32452b]" size={30} />,
+  Leaf: <Leaf className="text-[#4a211c]" size={30} strokeWidth={1.5} />,
+  Lotus: <LotusIconOutline className="text-[#4a211c]" size={32} />,
+  Database: <StonesIconOutline className="text-[#4a211c]" size={30} />,
 };
 
 export default function VideoPromo({ data }: VideoPromoProps) {
@@ -45,8 +45,8 @@ export default function VideoPromo({ data }: VideoPromoProps) {
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay to ensure text legibility */}
-        <div className="absolute inset-0 bg-[#29221b]/40 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/50" />
+        <div className="absolute inset-0 bg-[#311310]/60 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-[#311310]/40 to-black/60" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
@@ -59,14 +59,14 @@ export default function VideoPromo({ data }: VideoPromoProps) {
           transition={{ duration: 0.6 }}
           className="mb-2"
         >
-          <span className="text-[#849a75] font-bold tracking-[0.25em] text-[12px] uppercase mb-4 block">
+          <span className="text-[#b66f50] font-bold tracking-[0.25em] text-[12px] uppercase mb-4 block">
             {data.subtitle}
           </span>
           
           <div className="flex justify-center items-center gap-3 mb-3">
-            <span className="w-10 h-[1px] bg-[#849a75]"></span>
-            <LotusIconOutline className="text-[#849a75]" size={20} />
-            <span className="w-10 h-[1px] bg-[#849a75]"></span>
+            <span className="w-10 h-[1px] bg-[#b66f50]"></span>
+            <LotusIconOutline className="text-[#b66f50]" size={20} />
+            <span className="w-10 h-[1px] bg-[#b66f50]"></span>
           </div>
 
           <h2 className="text-[36px] sm:text-[42px] md:text-[50px] font-serif text-white mb-2 leading-tight max-w-[700px] mx-auto">
@@ -91,12 +91,12 @@ export default function VideoPromo({ data }: VideoPromoProps) {
             onClick={() => setOpen(true)}
           >
             <div className="absolute inset-0 rounded-full animate-ping opacity-0 group-hover:opacity-10 transition-opacity bg-white"></div>
-            <div className="w-[52px] h-[52px] bg-[#485f38] group-hover:bg-[#384832] rounded-full flex items-center justify-center text-white shadow-lg transition-colors">
+            <div className="w-[52px] h-[52px] bg-[#b66f50] group-hover:bg-[#c77c5d] rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300">
               <Play size={20} className="ml-1" fill="currentColor" strokeWidth={1} />
             </div>
           </div>
           
-          <span className="mt-3 text-[11px] font-bold tracking-[0.25em] text-white/90 uppercase">
+          <span className="mt-3 text-[11px] font-bold tracking-[0.25em] text-[#b66f50] uppercase">
             WATCH OUR SPA VIDEO
           </span>
         </motion.div>
@@ -119,7 +119,7 @@ export default function VideoPromo({ data }: VideoPromoProps) {
                 transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
                 className="flex flex-col items-center gap-3 sm:gap-4 relative md:border-r border-white/20 last:border-r-0 group cursor-pointer"
               >
-                <div className="w-[56px] h-[56px] sm:w-[64px] sm:h-[64px] bg-[#e8ece1] rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
+                <div className="w-[56px] h-[56px] sm:w-[64px] sm:h-[64px] bg-white/95 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
                   {iconMap[feature.icon]}
                 </div>
                 <span className="text-white/80 group-hover:text-white text-[12px] sm:text-[14px] font-medium tracking-wide text-center px-2">

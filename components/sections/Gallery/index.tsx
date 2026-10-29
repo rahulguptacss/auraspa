@@ -45,7 +45,7 @@ export default function Gallery({ data }: GalleryProps) {
   };
 
   return (
-    <section className="relative overflow-hidden py-12 md:py-16 bg-white">
+    <section id="gallery" className="relative overflow-hidden py-12 md:py-16 bg-white scroll-mt-20">
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4">
         {/* Header Section */}
         <motion.div
@@ -55,23 +55,24 @@ export default function Gallery({ data }: GalleryProps) {
           transition={{ duration: 0.6 }}
           className="mb-4 text-center"
         >
-          <div className="mb-1 flex items-center justify-center">
-            <span className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#849a75]">
+          <div className="mb-1 flex items-center justify-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#b66f50]" />
+            <span className="text-[13px] font-bold uppercase tracking-[0.2em] text-[#b66f50]">
               {data.subtitle}
             </span>
           </div>
 
-          <h2 className="mb-2 text-[38px] sm:text-[46px] font-serif leading-tight text-[#1c2417]">
+          <h2 className="mb-2 text-[38px] sm:text-[46px] font-serif leading-tight text-[#2b120f]">
             {data.title}
           </h2>
           
-          <div className="mb-3 flex items-center justify-center gap-3 text-[#b9c8a9]">
-            <span className="h-[1px] w-12 bg-[#b9c8a9]" />
-            <LotusIconExact size={22} className="text-[#849a75]" />
-            <span className="h-[1px] w-12 bg-[#b9c8a9]" />
+          <div className="mb-3 flex items-center justify-center gap-3 text-[#b66f50]">
+            <span className="h-[1px] w-12 bg-[#b66f50]" />
+            <LotusIconExact size={22} className="text-[#b66f50]" />
+            <span className="h-[1px] w-12 bg-[#b66f50]" />
           </div>
 
-          <p className="mx-auto max-w-[600px] text-[15px] leading-[1.6] text-stone-500">
+          <p className="mx-auto max-w-[600px] text-[15px] leading-[1.6] text-[#69524d]">
             {data.description}
           </p>
         </motion.div>
@@ -81,7 +82,7 @@ export default function Gallery({ data }: GalleryProps) {
         <div className="w-full max-w-xs mx-auto mb-8 md:hidden relative z-30">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="w-full flex items-center justify-between bg-[#f5f8ef] border border-[#eef2e6] text-[#485f38] font-medium text-[15px] py-3.5 pl-6 pr-5 rounded-full shadow-sm outline-none"
+            className="w-full flex items-center justify-between bg-[#f6ece8] border border-[#e5d3cc] text-[#4a211c] font-medium text-[15px] py-3.5 pl-6 pr-5 rounded-full shadow-xs outline-none"
           >
             {activeCategory}
             <ChevronDown size={18} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -94,7 +95,7 @@ export default function Gallery({ data }: GalleryProps) {
                 animate={{ opacity: 1, y: 0, scaleY: 1 }}
                 exit={{ opacity: 0, y: -10, scaleY: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#e4eadb] overflow-hidden origin-top"
+                className="absolute top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#e5d3cc] overflow-hidden origin-top"
               >
                 {data.categories.map((category) => (
                   <button
@@ -106,8 +107,8 @@ export default function Gallery({ data }: GalleryProps) {
                     }}
                     className={`w-full text-left px-6 py-3.5 text-[15px] transition-colors ${
                       activeCategory === category 
-                        ? 'bg-[#485f38] text-white font-medium' 
-                        : 'text-[#646f5e] hover:bg-[#f5f8ef] hover:text-[#485f38]'
+                        ? 'bg-[#4a211c] text-white font-medium' 
+                        : 'text-[#69524d] hover:bg-[#f6ece8] hover:text-[#4a211c]'
                     }`}
                   >
                     {category}
@@ -127,10 +128,10 @@ export default function Gallery({ data }: GalleryProps) {
                 setActiveCategory(category);
                 setLightboxIndex(null);
               }}
-              className={`px-6 py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-full text-[13px] font-medium transition-all duration-300 cursor-pointer ${
                 activeCategory === category
-                  ? 'bg-[#485f38] text-white shadow-md'
-                  : 'bg-[#f4f7f0] text-[#121826] hover:bg-[#e4eadb]'
+                  ? 'bg-[#4a211c] text-white shadow-md'
+                  : 'bg-[#f6ece8] text-[#2b120f] hover:bg-[#f0e2dc]'
               }`}
             >
               {category}
@@ -153,16 +154,16 @@ export default function Gallery({ data }: GalleryProps) {
                 transition={{ duration: 0.4 }}
                 key={item.id}
                 onClick={() => openLightbox(idx)}
-                className="w-full h-[240px] rounded-[16px] overflow-hidden shadow-sm relative group cursor-pointer"
+                className="w-full h-[240px] rounded-[16px] overflow-hidden shadow-xs relative group cursor-pointer border border-[#e5d3cc]/40"
               >
                 <img 
                   src={item.image} 
                   alt={item.category} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-white/90 rounded-full p-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#485f38" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <div className="absolute inset-0 bg-[#311310]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-white/95 rounded-full p-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4a211c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
                     </svg>
                   </div>

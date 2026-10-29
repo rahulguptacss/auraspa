@@ -28,7 +28,7 @@ export default function PackageGrid({ data }: PackageGridProps) {
     : data.items.filter(item => item.category === activeCategory);
 
   return (
-    <section className="relative overflow-hidden py-8 md:py-12 bg-white">
+    <section id="packages" className="relative overflow-hidden py-8 md:py-12 bg-white scroll-mt-20">
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4">
         {/* Header Section */}
         <motion.div
@@ -38,23 +38,24 @@ export default function PackageGrid({ data }: PackageGridProps) {
           transition={{ duration: 0.6 }}
           className="mb-4 text-center"
         >
-          <div className="mb-2 flex items-center justify-center">
-            <span className="text-[14px] font-bold uppercase tracking-[0.2em] text-[#6b8c4a]">
+          <div className="mb-2 flex items-center justify-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#b66f50]" />
+            <span className="text-[14px] font-bold uppercase tracking-[0.2em] text-[#b66f50]">
               {data.subtitle}
             </span>
           </div>
 
-          <h2 className="mb-3 text-[40px] sm:text-[48px] font-serif leading-tight text-[#2d3a24]">
+          <h2 className="mb-3 text-[40px] sm:text-[48px] font-serif leading-tight text-[#2b120f]">
             {data.title}
           </h2>
 
-          <div className="mb-4 flex items-center justify-center gap-3 text-[#b9c8a9]">
-            <span className="h-[1px] w-12 bg-[#b9c8a9]" />
-            <LotusIconExact size={22} className="text-[#6b8c4a]" />
-            <span className="h-[1px] w-12 bg-[#b9c8a9]" />
+          <div className="mb-4 flex items-center justify-center gap-3 text-[#b66f50]">
+            <span className="h-[1px] w-12 bg-[#b66f50]" />
+            <LotusIconExact size={22} className="text-[#b66f50]" />
+            <span className="h-[1px] w-12 bg-[#b66f50]" />
           </div>
 
-          <p className="mx-auto max-w-[650px] text-[16px] leading-[1.6] text-stone-500">
+          <p className="mx-auto max-w-[650px] text-[16px] leading-[1.6] text-[#69524d]">
             {data.description}
           </p>
         </motion.div>
@@ -64,7 +65,7 @@ export default function PackageGrid({ data }: PackageGridProps) {
         <div className="w-full max-w-xs mx-auto mb-8 md:hidden relative z-30">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="w-full flex items-center justify-between bg-[#f5f8ef] border border-[#eef2e6] text-[#485f38] font-medium text-[15px] py-3.5 pl-6 pr-5 rounded-full shadow-sm outline-none"
+            className="w-full flex items-center justify-between bg-[#f6ece8] border border-[#e5d3cc] text-[#4a211c] font-medium text-[15px] py-3.5 pl-6 pr-5 rounded-full shadow-xs outline-none"
           >
             {activeCategory}
             <ChevronDown size={18} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -77,7 +78,7 @@ export default function PackageGrid({ data }: PackageGridProps) {
                 animate={{ opacity: 1, y: 0, scaleY: 1 }}
                 exit={{ opacity: 0, y: -10, scaleY: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#e4eadb] overflow-hidden origin-top"
+                className="absolute top-full left-0 right-0 mt-2 bg-white rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#e5d3cc] overflow-hidden origin-top"
               >
                 {data.categories.map((category) => (
                   <button
@@ -88,8 +89,8 @@ export default function PackageGrid({ data }: PackageGridProps) {
                     }}
                     className={`w-full text-left px-6 py-3.5 text-[15px] transition-colors ${
                       activeCategory === category 
-                        ? 'bg-[#485f38] text-white font-medium' 
-                        : 'text-[#646f5e] hover:bg-[#f5f8ef] hover:text-[#485f38]'
+                        ? 'bg-[#4a211c] text-white font-medium' 
+                        : 'text-[#69524d] hover:bg-[#f6ece8] hover:text-[#4a211c]'
                     }`}
                   >
                     {category}
@@ -106,9 +107,9 @@ export default function PackageGrid({ data }: PackageGridProps) {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border ${activeCategory === category
-                  ? 'bg-[#485f38] text-white border-[#485f38] shadow-md'
-                  : 'bg-white text-[#485f38] border-[#e4eadb] hover:bg-[#f4f7f0]'
+              className={`px-6 py-2.5 rounded-full text-[14px] font-medium transition-all duration-300 border cursor-pointer ${activeCategory === category
+                  ? 'bg-[#4a211c] text-white border-[#4a211c] shadow-md'
+                  : 'bg-white text-[#4a211c] border-[#e5d3cc] hover:bg-[#f6ece8]'
                 }`}
             >
               {category}
@@ -130,11 +131,11 @@ export default function PackageGrid({ data }: PackageGridProps) {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
                 key={item.id}
-                className="flex flex-col bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 relative group"
+                className="flex flex-col bg-white rounded-[24px] overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-[#e5d3cc]/60 relative group"
               >
                 {/* Most Popular Badge */}
                 {item.mostPopular && (
-                  <div className="absolute top-4 right-4 z-10 bg-[#7a2c2c] text-white text-[12px] font-medium px-4 py-1.5 rounded-full shadow-md tracking-wide">
+                  <div className="absolute top-4 right-4 z-10 bg-[#b66f50] text-white text-[12px] font-bold px-4 py-1.5 rounded-full shadow-md tracking-wide">
                     Most Popular
                   </div>
                 )}
@@ -150,37 +151,37 @@ export default function PackageGrid({ data }: PackageGridProps) {
 
                 {/* Content Area */}
                 <div className="flex-1 flex flex-col p-6 sm:p-8">
-                  <h3 className="text-[20px] font-serif text-[#121826] mb-3 leading-tight">
+                  <h3 className="text-[20px] font-serif text-[#2b120f] mb-3 leading-tight">
                     {item.title}
                   </h3>
 
-                  <p className="text-[13px] text-gray-500 mb-4 leading-relaxed">
+                  <p className="text-[13px] text-[#69524d] mb-4 leading-relaxed">
                     {item.description}
                   </p>
 
                   <div className="mb-6 flex items-baseline gap-2">
-                    <span className="text-[32px] font-bold text-[#2d3a24] tracking-tight">{item.price}</span>
-                    <span className="text-[14px] text-gray-500">/ Session</span>
+                    <span className="text-[32px] font-bold text-[#4a211c] tracking-tight">{item.price}</span>
+                    <span className="text-[14px] text-[#69524d]">/ Session</span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
                     {item.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 size={18} className="text-[#6b8c4a] mt-0.5 flex-shrink-0" />
-                        <span className="text-[14px] text-gray-700 leading-snug">{feature}</span>
+                        <CheckCircle2 size={18} className="text-[#b66f50] mt-0.5 flex-shrink-0" />
+                        <span className="text-[14px] text-[#69524d] leading-snug">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   <div className="mt-auto">
-                    <div className="bg-[#f4f7f0] rounded-full py-2.5 px-4 flex items-center justify-center gap-2 mb-4 text-[#485f38]">
+                    <div className="bg-[#f6ece8] rounded-full py-2.5 px-4 flex items-center justify-center gap-2 mb-4 text-[#4a211c]">
                       <Clock size={16} />
                       <span className="text-[13px] font-medium">Duration: {item.duration}</span>
                     </div>
 
                     <Link
-                      href="/book-appointment"
-                      className="flex items-center justify-center gap-2 w-full bg-[#485f38] text-white py-3.5 rounded-full text-[14px] font-medium hover:bg-[#3a4d2c] transition-colors shadow-md hover:shadow-lg"
+                      href="#book"
+                      className="flex items-center justify-center gap-2 w-full bg-[#4a211c] text-white py-3.5 rounded-full text-[14px] font-medium hover:bg-[#311310] transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
                     >
                       Book Now
                       <ArrowRight size={16} />

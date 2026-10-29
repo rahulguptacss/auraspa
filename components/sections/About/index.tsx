@@ -65,7 +65,7 @@ export default function About({ data, hideButton = false }: AboutProps & { hideB
   };
 
   return (
-    <section id="about" className="py-16 bg-[#f6f5f0] relative overflow-hidden">
+    <section id="about" className="py-16 bg-[#fbf7f5] relative overflow-hidden scroll-mt-20">
       {/* Decorative Leaf Graphic */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none">
         <img src={data.decoration_image} alt="Leaf graphic" className="w-[350px] lg:w-[450px] h-auto object-contain" />
@@ -77,7 +77,7 @@ export default function About({ data, hideButton = false }: AboutProps & { hideB
           {/* Images Left */}
           <div className="w-full lg:w-1/2 relative h-[550px] flex items-center justify-center">
             {/* Light Green Background Box */}
-            <div className="absolute left-4 bottom-8 w-2/3 h-2/3 bg-[#e8eee3] rounded-[35px] -z-10" />
+            <div className="absolute left-4 bottom-8 w-2/3 h-2/3 bg-[#f0e2dc] rounded-[35px] -z-10" />
             
             <motion.img
               initial={{ opacity: 0, x: -50 }}
@@ -96,44 +96,66 @@ export default function About({ data, hideButton = false }: AboutProps & { hideB
               transition={{ duration: 0.8, delay: 0.2 }}
               src={data.image2}
               alt="Spa towels"
-              className="w-[60%] h-[320px] object-cover rounded-[35px] absolute bottom-4 right-0 border-[10px] border-[#f6f5f0] z-20 shadow-xl"
+              className="w-[60%] h-[320px] object-cover rounded-[35px] absolute bottom-4 right-0 border-[10px] border-[#fbf7f5] z-20 shadow-xl"
             />
           </div>
 
           {/* Content Right */}
           <div className="w-full lg:w-1/2">
-            <div className="mb-4">
-              <span className="text-[#7c9270] font-semibold tracking-[0.2em] text-[13px] uppercase">
+            <div className="mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#b66f50]" />
+              <span className="text-[#b66f50] font-bold tracking-[0.2em] text-[13px] uppercase">
                 {data.subtitle}
               </span>
             </div>
             
-            <h2 className="text-4xl md:text-[52px] font-serif text-[#162115] leading-[0.95] mb-6">
+            <h2 className="text-4xl md:text-[52px] font-serif text-[#2b120f] leading-[0.95] mb-6">
               {data.title_line1} <br/>
-              <span className="text-[#162115]">{data.title_line2}</span>
+              <span className="text-[#2b120f]">{data.title_line2}</span>
             </h2>
 
-            <p className="text-[#596558] leading-[1.8] text-[16px] mb-10 max-w-[480px]">
+            <p className="text-[#69524d] leading-[1.8] text-[16px] mb-10 max-w-[540px]">
               {data.description}
             </p>
 
-            <div className="grid grid-cols-3 gap-2 mb-10 max-w-[480px]">
-              {data.stats.map((stat, idx) => (
-                <div key={idx} className={`${idx !== 2 ? 'border-r border-[#d2d8ce]' : ''} pl-4 first:pl-0`}>
-                  <div className="text-[40px] lg:text-[46px] font-serif text-[#33462c] mb-1 leading-none">
-                    <Counter value={stat.value} />
+            <div className={`grid ${
+              data.stats.length === 4
+                ? 'grid-cols-2 sm:grid-cols-4 gap-y-6 sm:gap-y-0 max-w-[560px]'
+                : data.stats.length === 2
+                ? 'grid-cols-2 max-w-[360px]'
+                : 'grid-cols-3 max-w-[480px]'
+            } mb-10`}>
+              {data.stats.map((stat, idx) => {
+                const total = data.stats.length;
+                let borderClasses = '';
+                if (total === 4) {
+                  const mobileBorder = idx % 2 === 0 ? 'border-r border-[#e5d3cc]' : 'border-r-0';
+                  const desktopBorder = idx !== total - 1 ? 'sm:border-r sm:border-[#e5d3cc]' : 'sm:border-r-0';
+                  borderClasses = `${mobileBorder} ${desktopBorder}`;
+                } else {
+                  borderClasses = idx !== total - 1 ? 'border-r border-[#e5d3cc]' : '';
+                }
+
+                return (
+                  <div 
+                    key={idx} 
+                    className={`${borderClasses} px-3 sm:px-4 first:pl-0 last:pr-0`}
+                  >
+                    <div className="text-[34px] sm:text-[38px] lg:text-[42px] font-serif text-[#4a211c] mb-1 leading-none">
+                      <Counter value={stat.value} />
+                    </div>
+                    <div className="text-[14px] text-[#69524d] leading-snug font-medium">
+                      {formatLabel(stat.label)}
+                    </div>
                   </div>
-                  <div className="text-[15px] text-[#596558] leading-snug font-medium">
-                    {formatLabel(stat.label)}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {!hideButton && (
               <Link
                 href={data.button.href}
-                className="inline-flex items-center justify-center gap-2 bg-[#4a5e3d] text-white px-7 py-3.5 rounded-full text-[15px] font-medium transition-colors hover:bg-[#344529] shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-[#4a211c] text-white px-7 py-3.5 rounded-full text-[15px] font-medium transition-all duration-300 hover:bg-[#311310] hover:shadow-lg shadow-md"
               >
                 {data.button.text} <ArrowRight size={18} />
               </Link>

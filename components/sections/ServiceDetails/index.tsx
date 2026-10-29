@@ -62,7 +62,7 @@ export default function ServiceDetails({ service, allServices, data }: { service
                     <Link 
                       key={idx} 
                       href={svc.link || `/services/${svc.slug}`} 
-                      className={`flex items-center gap-4 p-2 mb-1 ${isActive ? 'bg-[#fcfdfa] rounded-[12px] shadow-sm' : 'group'}`}
+                      className={`flex items-center gap-4 p-2 mb-1 ${isActive ? 'bg-[#fbf7f5] rounded-[12px] shadow-sm' : 'group'}`}
                     >
                       <div className="w-[46px] h-[46px] rounded-[10px] overflow-hidden relative flex-shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
                         <Image src={svc.image} alt={svc.title} layout="fill" objectFit="cover" />
@@ -95,7 +95,7 @@ export default function ServiceDetails({ service, allServices, data }: { service
                 <p className="text-stone-200 text-[15px] mb-8 leading-relaxed">
                   Experience profound relaxation as our expert therapists release tension.
                 </p>
-                <Link href="#contact" className="inline-flex items-center gap-3 bg-white text-[#1c2417] px-6 py-3.5 rounded-full font-bold text-sm hover:bg-stone-100 transition-colors">
+                <Link href="#contact" className="inline-flex items-center gap-3 bg-white text-[#2b120f] px-6 py-3.5 rounded-full font-bold text-sm hover:bg-stone-100 transition-colors">
                   <div className="bg-[#526343] p-1.5 rounded-full text-white">
                     <Phone className="w-4 h-4" />
                   </div>
@@ -114,17 +114,17 @@ export default function ServiceDetails({ service, allServices, data }: { service
 
             {/* Title & Description */}
             <div className="mb-10">
-              <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#849a75] mb-3 block">
+              <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#b66f50] mb-3 block">
                 {service.title.toUpperCase()}
               </span>
-              <h1 className="text-3xl md:text-4xl font-serif text-[#1c2417] mb-6">
-                <span className="font-bold text-[#1c2417]">{service.title.split(' ')[0]}</span> <span className="text-[#485f38]">{service.title.split(' ').slice(1).join(' ')}</span>
+              <h1 className="text-3xl md:text-4xl font-serif text-[#2b120f] mb-6">
+                <span className="font-bold text-[#2b120f]">{service.title.split(' ')[0]}</span> <span className="text-[#4a211c]">{service.title.split(' ').slice(1).join(' ')}</span>
               </h1>
               
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-[1px] w-12 bg-[#849a75]" />
-                <LotusIconExact size={24} className="text-[#849a75]" />
-                <div className="h-[1px] w-12 bg-[#849a75]" />
+                <div className="h-[1px] w-12 bg-[#b66f50]" />
+                <LotusIconExact size={24} className="text-[#b66f50]" />
+                <div className="h-[1px] w-12 bg-[#b66f50]" />
               </div>
 
               <p className="text-stone-600 text-[16px] leading-relaxed mb-6 whitespace-pre-wrap">
@@ -133,18 +133,18 @@ export default function ServiceDetails({ service, allServices, data }: { service
             </div>
 
             {/* Key Benefits */}
-            <div className="bg-[#f4f7f0] rounded-[24px] p-6 md:p-8 mb-12">
-              <h3 className="text-3xl md:text-[34px] font-serif text-[#121826] mb-6">Key Benefits</h3>
+            <div className="bg-[#f6ece8] rounded-[24px] p-6 md:p-8 mb-12">
+              <h3 className="text-3xl md:text-[34px] font-serif text-[#2b120f] mb-6">Key Benefits</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
                 {data?.keyBenefits?.map((benefit: any, idx: number) => (
                   <div key={idx} className={`flex flex-col items-center text-center px-2 md:px-4 ${idx !== data.keyBenefits.length - 1 ? 'md:border-r border-[#dce4d1]' : ''}`}>
-                    <div className="w-[64px] h-[64px] rounded-full bg-[#e6efdb] flex items-center justify-center mb-4 text-[#324523]">
+                    <div className="w-[64px] h-[64px] rounded-full bg-[#e6efdb] flex items-center justify-center mb-4 text-[#311310]">
                       {(!benefit.icon || benefit.icon.includes('lotus')) && <LotusIconExact size={32} />}
                       {benefit.icon?.includes('leaf') && <LeafIcon size={32} />}
                       {benefit.icon?.includes('stones') && <StonesIcon size={32} />}
                       {benefit.icon?.includes('moon') && <MoonZIcon size={32} />}
                     </div>
-                    <h4 className="text-[16px] font-bold text-[#121826] mb-2 leading-snug">{benefit.title}</h4>
+                    <h4 className="text-[16px] font-bold text-[#2b120f] mb-2 leading-snug">{benefit.title}</h4>
                     <p className="text-[13px] text-[#6b7280] leading-relaxed max-w-[180px]">{benefit.desc}</p>
                   </div>
                 ))}
@@ -154,7 +154,7 @@ export default function ServiceDetails({ service, allServices, data }: { service
             {/* Who is it for? */}
             <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
               <div className="flex-1">
-                <h3 className="text-3xl md:text-[34px] font-serif text-[#121826] mb-5">Who is it for?</h3>
+                <h3 className="text-3xl md:text-[34px] font-serif text-[#2b120f] mb-5">Who is it for?</h3>
                 <p className="text-[#6b7280] text-[17px] leading-[1.8]">
                   {service.title} is ideal for anyone looking to de-stress, relax, and rejuvenate—whether you have a busy lifestyle, experience muscle tension, or simply want to enhance your overall wellness and mood.
                 </p>

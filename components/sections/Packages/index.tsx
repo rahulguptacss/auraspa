@@ -40,15 +40,15 @@ export default function Packages({ data }: PackagesProps) {
             viewport={{ once: true }}
             className="flex flex-col items-center mb-5"
           >
-            <div className="text-[#a4bc8a] mb-2.5">
+            <div className="text-[#e5d3cc] mb-2.5">
               <LotusIcon size={30} />
             </div>
             <div className="flex justify-center items-center gap-4 w-full">
-              <span className="w-12 sm:w-20 h-[1px] bg-[#a4bc8a] opacity-80"></span>
+              <span className="w-12 sm:w-20 h-[1px] bg-[#e5d3cc] opacity-80"></span>
               <span className="text-[#b2c899] font-medium tracking-[0.2em] text-[13px] sm:text-[14px] uppercase whitespace-nowrap">
                 {data.subtitle}
               </span>
-              <span className="w-12 sm:w-20 h-[1px] bg-[#a4bc8a] opacity-80"></span>
+              <span className="w-12 sm:w-20 h-[1px] bg-[#e5d3cc] opacity-80"></span>
             </div>
           </motion.div>
           
@@ -79,7 +79,7 @@ export default function Packages({ data }: PackagesProps) {
           >
             <Link
               href={data.button.href}
-              className="inline-flex items-center gap-3 bg-[#d2dac0] text-[#1a1f17] px-8 py-3.5 rounded-full text-[15px] font-bold hover:bg-white hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl group"
+              className="inline-flex items-center gap-3 bg-[#d2dac0] text-[#2b120f] px-8 py-3.5 rounded-full text-[15px] font-bold hover:bg-white hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl group"
             >
               {data.button.text}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

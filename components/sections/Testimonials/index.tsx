@@ -60,7 +60,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
   const realIndex = (currentIndex + data.reviews.length * 10) % data.reviews.length;
 
   return (
-    <section className="py-8 lg:py-10 relative overflow-hidden bg-[#f9fbf6]">
+    <section id="testimonials" className="py-8 lg:py-10 relative overflow-hidden bg-[#fbf7f5] scroll-mt-20">
       {/* Full Background Image */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
@@ -78,15 +78,15 @@ export default function Testimonials({ data }: TestimonialsProps) {
             className="flex flex-col items-center mb-1.5"
           >
             <div className="flex justify-center items-center gap-2 mb-2 w-full">
-              <span className="w-12 sm:w-24 h-[1px] bg-[#758a62] opacity-40"></span>
-              <div className="w-1.5 h-1.5 rotate-45 bg-[#758a62] opacity-60"></div>
-              <div className="text-[#758a62] px-1">
+              <span className="w-12 sm:w-24 h-[1px] bg-[#b66f50] opacity-40"></span>
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#b66f50] opacity-60"></div>
+              <div className="text-[#b66f50] px-1">
                 <LotusIcon size={22} />
               </div>
-              <div className="w-1.5 h-1.5 rotate-45 bg-[#758a62] opacity-60"></div>
-              <span className="w-12 sm:w-24 h-[1px] bg-[#758a62] opacity-40"></span>
+              <div className="w-1.5 h-1.5 rotate-45 bg-[#b66f50] opacity-60"></div>
+              <span className="w-12 sm:w-24 h-[1px] bg-[#b66f50] opacity-40"></span>
             </div>
-            <span className="text-[#516b41] font-medium tracking-[0.3em] text-[12px] sm:text-[13px] uppercase whitespace-nowrap">
+            <span className="text-[#b66f50] font-bold tracking-[0.3em] text-[12px] sm:text-[13px] uppercase whitespace-nowrap">
               {data.subtitle}
             </span>
           </motion.div>
@@ -96,7 +96,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-[44px] md:text-[54px] lg:text-[62px] font-medium font-serif text-[#11160e] mb-1.5 leading-tight tracking-tight"
+            className="text-[44px] md:text-[54px] lg:text-[62px] font-medium font-serif text-[#2b120f] mb-1.5 leading-tight tracking-tight"
           >
             {data.title_line1}
           </motion.h2>
@@ -106,7 +106,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-[#646f5e] text-[15px] sm:text-[16px] max-w-2xl mx-auto leading-relaxed whitespace-pre-line"
+            className="text-[#69524d] text-[15px] sm:text-[16px] max-w-2xl mx-auto leading-relaxed whitespace-pre-line"
           >
             {data.description}
           </motion.p>
@@ -117,13 +117,13 @@ export default function Testimonials({ data }: TestimonialsProps) {
           {/* Navigation Arrows (Desktop) */}
           <div 
             onClick={prevSlide}
-            className="hidden lg:flex absolute top-[55%] -left-3 lg:-left-6 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full border border-[#d3ddc5] items-center justify-center text-[#485f38] hover:bg-[#e8ecd9] transition-colors cursor-pointer z-20 shadow-sm"
+            className="hidden lg:flex absolute top-[55%] -left-3 lg:-left-6 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full border border-[#e5d3cc] items-center justify-center text-[#4a211c] hover:bg-[#f6ece8] transition-colors cursor-pointer z-20 shadow-xs"
           >
             <ChevronLeft size={24} />
           </div>
           <div 
             onClick={nextSlide}
-            className="hidden lg:flex absolute top-[55%] -right-3 lg:-right-6 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full border border-[#d3ddc5] items-center justify-center text-[#485f38] hover:bg-[#e8ecd9] transition-colors cursor-pointer z-20 shadow-sm"
+            className="hidden lg:flex absolute top-[55%] -right-3 lg:-right-6 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full border border-[#e5d3cc] items-center justify-center text-[#4a211c] hover:bg-[#f6ece8] transition-colors cursor-pointer z-20 shadow-xs"
           >
             <ChevronRight size={24} />
           </div>
@@ -140,10 +140,10 @@ export default function Testimonials({ data }: TestimonialsProps) {
                   }}
                   onTransitionEnd={idx === currentIndex ? handleTransitionEnd : undefined}
                 >
-                  <div className="bg-white rounded-[20px] px-6 pb-6 pt-10 relative shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#f3f6ec] flex flex-col h-full mx-auto max-w-[95%] sm:max-w-none">
+                  <div className="bg-white rounded-[20px] px-6 pb-6 pt-10 relative shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#e5d3cc]/60 flex flex-col h-full mx-auto max-w-[95%] sm:max-w-none">
                     
                     {/* Floating Quote Badge */}
-                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-[48px] h-[48px] rounded-full bg-[#e5e7dc] flex items-center justify-center text-[#354b2d] shadow-sm">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-[48px] h-[48px] rounded-full bg-[#4a211c] flex items-center justify-center text-[#b66f50] shadow-md">
                       <span className="font-serif text-[32px] leading-none pt-3.5 tracking-tighter">“</span>
                     </div>
                     
@@ -153,22 +153,22 @@ export default function Testimonials({ data }: TestimonialsProps) {
                         <Star
                           key={i}
                           size={16}
-                          className={i < review.rating ? "fill-[#f5a623] text-[#f5a623]" : "fill-gray-200 text-gray-200"}
+                          className={i < review.rating ? "fill-[#b66f50] text-[#b66f50]" : "fill-gray-200 text-gray-200"}
                         />
                       ))}
                     </div>
                     
                     {/* Review Text */}
-                    <p className="text-[#5a6255] text-[13.5px] font-medium leading-[1.65] mb-5 flex-grow text-center sm:text-left">
+                    <p className="text-[#69524d] text-[13.5px] font-medium leading-[1.65] mb-5 flex-grow text-center sm:text-left">
                       {review.text}
                     </p>
                     
                     {/* Divider */}
-                    <div className="h-[1px] w-full bg-[#e3e7dc] mb-5"></div>
+                    <div className="h-[1px] w-full bg-[#e5d3cc]/40 mb-5"></div>
                     
                     {/* Avatar & Info */}
                     <div className="relative flex items-center gap-3.5 mt-auto justify-center sm:justify-start">
-                      <div className="w-[48px] h-[48px] rounded-full overflow-hidden flex-shrink-0 shadow-sm">
+                      <div className="w-[48px] h-[48px] rounded-full overflow-hidden flex-shrink-0 shadow-sm border border-[#e5d3cc]/60">
                         <img
                           src={review.avatar}
                           alt={review.author}
@@ -176,12 +176,12 @@ export default function Testimonials({ data }: TestimonialsProps) {
                         />
                       </div>
                       <div className="z-10 relative text-left">
-                        <h4 className="font-bold text-[#2a3c26] text-[13px] uppercase tracking-wide mb-0.5">{review.author}</h4>
-                        <p className="text-[#8e9886] font-medium text-[12px] capitalize">{review.role}</p>
+                        <h4 className="font-bold text-[#2b120f] text-[13px] uppercase tracking-wide mb-0.5">{review.author}</h4>
+                        <p className="text-[#b66f50] font-medium text-[12px] capitalize">{review.role}</p>
                       </div>
                       
                       {/* Large Bottom Quote */}
-                      <div className="absolute bottom-0 right-0 text-[#c8d4b9] font-serif text-[50px] leading-none pointer-events-none translate-y-1">
+                      <div className="absolute bottom-0 right-0 text-[#e5d3cc]/40 font-serif text-[50px] leading-none pointer-events-none translate-y-1">
                         ”
                       </div>
                     </div>
@@ -200,7 +200,7 @@ export default function Testimonials({ data }: TestimonialsProps) {
                   setIsTransitioning(true);
                   setCurrentIndex(data.reviews.length + idx);
                 }}
-                className={`w-2.5 h-2.5 rounded-full transition-colors ${realIndex === idx ? 'bg-[#5e7a48]' : 'bg-white border border-[#5e7a48]'}`}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${realIndex === idx ? 'bg-[#4a211c]' : 'bg-white border border-[#4a211c]'}`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}

@@ -59,10 +59,10 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function WhyChooseUs({ data }: FeatureProps) {
   return (
-    <section className="py-12 lg:py-16 bg-[#fcfdfa] relative overflow-hidden">
+    <section id="why-us" className="py-12 lg:py-16 bg-white relative overflow-hidden scroll-mt-20">
       {/* Background Decoratives */}
       <div className="absolute left-8 lg:left-16 bottom-8 lg:bottom-12 z-0 opacity-40">
-        <svg width="120" height="120" viewBox="0 0 100 100" className="text-[#a1b894]">
+        <svg width="120" height="120" viewBox="0 0 100 100" className="text-[#e5d3cc]">
           <pattern id="dotPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
             <circle cx="3" cy="3" r="2.5" fill="currentColor" />
           </pattern>
@@ -70,15 +70,15 @@ export default function WhyChooseUs({ data }: FeatureProps) {
         </svg>
       </div>
 
-      <div className="absolute -left-20 top-[15%] z-0 opacity-[0.06] pointer-events-none -rotate-12">
-        <svg width="400" height="500" viewBox="0 0 24 24" fill="currentColor" className="text-[#485f38]">
+      <div className="absolute -left-20 top-[15%] z-0 opacity-[0.05] pointer-events-none -rotate-12">
+        <svg width="400" height="500" viewBox="0 0 24 24" fill="currentColor" className="text-[#4a211c]">
           <path d="M12 21 C12 21 3 15 3 8 C3 4 12 2 12 2 C12 2 21 4 21 8 C21 15 12 21 12 21 Z" />
           <path d="M12 21 L12 2" stroke="white" strokeWidth="0.5" />
         </svg>
       </div>
       
       <div className="absolute right-0 top-0 z-0 opacity-[0.04] pointer-events-none rotate-45 transform translate-x-1/2 -translate-y-1/4">
-        <svg width="600" height="600" viewBox="0 0 24 24" fill="currentColor" className="text-[#485f38]">
+        <svg width="600" height="600" viewBox="0 0 24 24" fill="currentColor" className="text-[#4a211c]">
           <path d="M12 21 C12 21 3 15 3 8 C3 4 12 2 12 2 C12 2 21 4 21 8 C21 15 12 21 12 21 Z" />
         </svg>
       </div>
@@ -105,7 +105,7 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="absolute right-0 -bottom-8 lg:-bottom-12 w-[65%] sm:w-[60%] h-[220px] sm:h-[280px] lg:h-[320px] z-20 border-[6px] sm:border-[8px] lg:border-[12px] border-[#fcfdfa] rounded-[24px] lg:rounded-3xl overflow-hidden shadow-sm"
+              className="absolute right-0 -bottom-8 lg:-bottom-12 w-[65%] sm:w-[60%] h-[220px] sm:h-[280px] lg:h-[320px] z-20 border-[6px] sm:border-[8px] lg:border-[12px] border-white rounded-[24px] lg:rounded-3xl overflow-hidden shadow-md"
             >
               <img src={data.image2} alt="Spa Massage" className="w-full h-full object-cover" />
             </motion.div>
@@ -116,11 +116,11 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute left-0 lg:-left-2 top-[15%] lg:top-[25%] z-30 bg-[#61744e] text-white p-5 lg:p-7 rounded-[20px] shadow-xl flex flex-col items-center text-center w-[140px] lg:w-[155px]"
+              className="absolute left-0 lg:-left-2 top-[15%] lg:top-[25%] z-30 bg-[#4a211c] border border-[#b66f50]/30 text-white p-5 lg:p-7 rounded-[20px] shadow-xl flex flex-col items-center text-center w-[140px] lg:w-[155px]"
             >
-              <LotusIcon size={38} className="mb-3 opacity-95" />
+              <LotusIcon size={38} className="mb-3 text-[#b66f50]" />
               <span className="text-[11px] lg:text-[12px] font-medium tracking-wide leading-tight mb-2 opacity-90">Providing<br/>Wellness Since</span>
-              <span className="text-3xl lg:text-[34px] font-bold tracking-tight">{data.badge_year}</span>
+              <span className="text-3xl lg:text-[34px] font-serif font-bold tracking-tight text-[#b66f50]">{data.badge_year}</span>
             </motion.div>
           </div>
 
@@ -131,10 +131,10 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 bg-[#f9fbf6] border border-[#e8efe2] shadow-sm px-4 py-[6px] rounded-full self-start mb-6"
+              className="inline-flex items-center gap-2 bg-[#f6ece8] border border-[#e5d3cc] shadow-xs px-4 py-[6px] rounded-full self-start mb-6"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#516b41]"></span>
-              <span className="text-[#516b41] font-bold text-[14px] tracking-wide capitalize">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#b66f50]"></span>
+              <span className="text-[#b66f50] font-bold text-[14px] tracking-wide capitalize">
                 {data.subtitle.toLowerCase()}
               </span>
             </motion.div>
@@ -145,10 +145,10 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-[36px] md:text-[42px] lg:text-[46px] font-medium font-serif text-[#1a1f17] leading-[1.15] mb-6 tracking-tight"
+              className="text-[36px] md:text-[42px] lg:text-[46px] font-medium font-serif text-[#2b120f] leading-[1.15] mb-6 tracking-tight"
             >
               {data.title_line1} <br className="hidden sm:block" />
-              <span className="text-[#516b41]">{data.title_highlight}</span> and <span className="text-[#516b41]">{data.title_line2.replace(/and/i, '').trim()}</span>
+              <span className="text-[#4a211c]">{data.title_highlight}</span> and <span className="text-[#4a211c]">{data.title_line2.replace(/and/i, '').trim()}</span>
             </motion.h2>
 
             {/* Description */}
@@ -157,7 +157,7 @@ export default function WhyChooseUs({ data }: FeatureProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-[#646f5e] text-[15px] sm:text-[16px] leading-[1.7] mb-10"
+              className="text-[#69524d] text-[15px] sm:text-[16px] leading-[1.7] mb-10"
             >
               {data.description}
             </motion.p>
@@ -177,14 +177,14 @@ export default function WhyChooseUs({ data }: FeatureProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.15 * idx }}
-                  className="flex gap-4 rounded-[24px] bg-[#f0f3eb] p-5"
+                  className="flex gap-4 rounded-[24px] bg-[#f6ece8] border border-[#e5d3cc]/40 p-5 hover:border-[#e5d3cc] transition-all duration-300"
                 >
-                  <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#d3ddc5] bg-gradient-to-br from-white via-[#e8efe0] to-[#cbd7be] text-[#1a1f17]">
+                  <div className="flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full border border-[#e5d3cc] bg-white text-[#4a211c] shadow-xs">
                     {iconMap[point.icon]}
                   </div>
                   <div>
-                    <h4 className="text-[15px] font-bold leading-tight text-[#1a1f17]">{point.title}</h4>
-                    <p className="mt-1 text-[13px] leading-relaxed text-[#737b6d]">{point.description}</p>
+                    <h4 className="text-[15px] font-bold leading-tight text-[#2b120f]">{point.title}</h4>
+                    <p className="mt-1 text-[13px] leading-relaxed text-[#69524d]">{point.description}</p>
                   </div>
                 </motion.div>
               ))}
